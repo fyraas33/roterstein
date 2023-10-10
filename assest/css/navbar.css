@@ -2349,12 +2349,7 @@ textarea.input-field {
 
 
 @media (min-width: 1920px) {
-  .container,
-  :is(.service, .event) .container {
-    max-width: 2000px;
-    width: 100%;
-    margin-inline: auto;
-  }
+
 
   .menu .grid-list{
     margin-left: 200px;
