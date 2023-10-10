@@ -1,0 +1,84 @@
+
+
+  /* COMPONENT STYLES */
+  .opening-hours {
+    
+  
+    color: #fff;
+  
+    background-size: cover;
+  
+  }
+  .opening-hours_day {
+    color: white !important; /* Use !important to ensure it takes precedence */
+  }
+  
+  .open {
+    color: green !important;
+  }
+  
+  .closed {
+    color: red !important;
+  }
+ 
+  .opening-hours_title {
+    padding-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  .opening-hours_days {
+      padding: 0;
+  }
+  .opening-hours_day {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5em;
+    list-style: none;
+    border-bottom: solid 1px #FFFFFF33;
+  }
+
+
+  .opnhr{
+    width: 100% !important;
+   
+  }
+
+  .opnhr span{
+    font-size: 1.5rem;
+  }
+  @media (min-width: 650px) {
+    .opnhr{
+        width: 50% !important;
+       
+      }
+    
+ }
+
+ .rowmen {
+    display: grid;
+    align-items: center;
+    background: #fff;
+  padding: 20px;
+
+ }
+
+ .iconic-clock{
+  width: 50px;
+  display: inline-block;
+  height: 10%;
+ margin-top: 10px;
+ }
+
+
+
+ .fotter{
+  font-size: 1.5rem !important;
+  background-color: #f1f1f1 !important; 
+  padding: 14px;
+ }
+ .fotter h2{
+  font-size: 2rem !important;
+ }
+.bg-white{
+  background-color: #f1f1f1 !important; 
+}

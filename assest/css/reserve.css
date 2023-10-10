@@ -1,0 +1,20 @@
+.hostt
+{
+    display: flex;
+    justify-content: center;
+}
+#prfl1, #prfl2
+{
+    display:inline ;
+    margin-left: 15px;
+}
+
+
+.testi{
+    background-image:url("../img/hstbg.jpg") !important ;
+}
+
+.form-right{
+    background-image: url("../img/form-pattern.png") !important;
+}
+
