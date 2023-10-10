@@ -20,7 +20,6 @@
     "owl.carousel": "^2.3.4",
     "pdfjs-dist": "^3.11.174",
     "react": "^18",
-    "react-coverflow": "^0.2.20",
     "react-dom": "^18",
     "react-ionicons": "^4.2.1",
     "react-modal": "^3.16.1",
