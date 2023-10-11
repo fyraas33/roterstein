@@ -70,10 +70,7 @@ const parg="  Lorem Ipsum is simply dummy text of the printingand typesettingind
                  whileInView="visible" 
                 variants={rotVariants}
                 className="has-before hover:shine">
-                  <figure 
-                    className="card-banner img-holder"
-                    style={{ width: 285, height: 285 }}
-                  >
+             
                     <Image
                       src={abt2}
                       width={285}
@@ -82,7 +79,7 @@ const parg="  Lorem Ipsum is simply dummy text of the printingand typesettingind
                       alt=""
                       className="w-100 "
                     />
-                  </figure>
+                
                 </motion.div>
               </div>
             </div>
