@@ -3,9 +3,9 @@ import { Icon } from '@iconify/react';
 import Modal from "react-modal";
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
-import hero1 from "../assest/img/hero-slider-1.jpg"
-import hero2 from "../assest/img/hero-slider-2.jpg"
-import hero3 from "../assest/img/hero-slider-3.jpg"
+import hero1 from "../assest/img/hero-slider.png"
+import hero2 from "../assest/img/hero-slider2.png"
+import hero3 from "../assest/img/hero-slider3.png"
 import hricon from "../assest/img/hero-icon.png"
 import BookModal from "./BookModal"
 function Hero() {
@@ -136,7 +136,7 @@ function Hero() {
               priority
             />
       </div>
-      <p className="label-2 section-subtitle slider-reveal">
+      <p className="label-2 section-subtitle slider-reveal ownr">
        lorem &amp; lorem
       </p>
       <h1 className="display-1 hero-title slider-reveal">
@@ -147,7 +147,7 @@ Lorem ipsum dolor sit
       Lorem ipsum dolor sit &amp; Lorem ipsum dolor sit
       </p>
       <a href="#menu" className="btn btn-primary slider-reveal">
-        <span className="text text-1">View Our Menu</span>
+        <span className="text text-1 ownr">View Our Menu</span>
         <span className="text text-2" aria-hidden="true">
           View Our Menu
         </span>
@@ -164,7 +164,7 @@ Lorem ipsum dolor sit
               priority
             />
       </div>
-      <p className="label-2 section-subtitle slider-reveal">
+      <p className="label-2 section-subtitle slider-reveal ownr">
       Lorem ipsum 
       </p>
       <h1 className="display-1 hero-title slider-reveal">
@@ -175,8 +175,8 @@ Lorem ipsum dolor sit
       Lorem ipsum dolor sit &amp; Lorem ipsum dolor sit
       </p>
       <a href="#menu" className="btn btn-primary slider-reveal">
-        <span className="text text-1">View Our Menu</span>
-        <span className="text text-2" aria-hidden="true">
+        <span className="text text-1 ownr">View Our Menu</span>
+        <span className="text text-2 " aria-hidden="true">
           View Our Menu
         </span>
       </a>
@@ -192,7 +192,7 @@ Lorem ipsum dolor sit
               priority
             />
       </div>
-      <p className="label-2 section-subtitle slider-reveal">
+      <p className="label-2 section-subtitle slider-reveal ownr">
        lorem &amp; lorem
       </p>
       <h1 className="display-1 hero-title slider-reveal">
@@ -203,8 +203,8 @@ Lorem ipsum dolor sit
       Lorem ipsum dolor sit &amp; Lorem ipsum dolor sit
       </p>
       <a href="#menu" className="btn btn-primary slider-reveal">
-        <span className="text text-1">View Our Menu</span>
-        <span className="text text-2" aria-hidden="true">
+        <span className="text text-1 ownr">View Our Menu</span>
+        <span className="text text-2 " aria-hidden="true">
           View Our Menu
         </span>
       </a>
@@ -240,7 +240,7 @@ Lorem ipsum dolor sit
               />
 </div>
              
-    <span className="label-2 text-center span">Book A Table</span>
+    <span className="label-2 text-center span">TISCH BUCHEN</span>
   </a>
   <Modal
                     appElement={

@@ -655,13 +655,6 @@ body.nav-active {
   }
 }
 
-/*-----------------------------------*\
-  #TOPBAR
-\*-----------------------------------*/
-
-.topbar {
-  display: none;
-}
 
 /*-----------------------------------*\
   #HEADER
@@ -1878,11 +1871,11 @@ textarea.input-field {
 
   .reservation .input-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    
     column-gap: 20px;
   }
 
-  .reservation .input-wrapper:nth-child(4) {
+  .reservation .input-wrapper {
     grid-template-columns: repeat(3, 1fr);
   }
 

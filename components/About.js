@@ -28,8 +28,8 @@ const parg="  Lorem Ipsum is simply dummy text of the printingand typesettingind
       >
         <div className="container">
           <div className="about-content">
-            <p className="label-2 section-subtitle" id="about-label" data-aos="fade-right">
-              About us
+            <p className="section-subtitle ownr" id="about-label" data-aos="fade-right">
+            ÜBER UNS
             </p>
             <h2 className="headline-1 section-title" data-aos="fade-up">
               {" "}

@@ -14,7 +14,7 @@ function Gallery() {
     <div>
        <section className="section features text-center" aria-label="features" id='gallery'>
   <div className="container">
-    <p className="section-subtitle label-2">Gallery</p>
+    <p className="section-subtitle ownr">RESTAURANT</p>
     <h2 className="headline-1 section-title">Roter Stein</h2>
     <ul className="grid-list">
      

@@ -51,34 +51,34 @@ function Mbnav() {
           <li className="navbar-item">
             <motion.a href="#about" className="navbar-link hover-underline" whileTap={{scale:0.5}} >
               <div className="separator" />
-              <span className="span" >about us</span>
+              <span className="span" >ÜBER UNS</span>
             </motion.a>
           </li>
           <li className="navbar-item">
             <motion.a href="#menu" className="navbar-link hover-underline" whileTap={{scale:0.5}} >
               <div className="separator" />
-              <span className="span" >Menus</span>
+              <span className="span" >MENÜ</span>
             </motion.a>
           </li>
           <li className="navbar-item">
             <motion.a href="#host" className="navbar-link hover-underline" whileTap={{scale:0.5}} >
               <div className="separator" />
-              <span className="span" >YOUR HOST</span>
+              <span className="span" >GASTGEBER</span>
             </motion.a>
           </li>
           <li className="navbar-item">
             <motion.a href="#gallery" className="navbar-link hover-underline" whileTap={{scale:0.5}} >
               <div className="separator" />
-              <span className="span" >gallery</span>
+              <span className="span" >RESTAURANT</span>
             </motion.a>
           </li>
         </ul>
        
       </nav>
       <motion.a href="#reservation" className="btn btn-secondary" whileTap={{scale:0.5}}  >
-        <span className="text text-1">Find A Table</span>
+        <span className="text text-1">TISCH BUCHEN</span>
         <span className="text text-2" aria-hidden="true">
-          Find A Table
+        TISCH BUCHEN
         </span>
       </motion.a>
       <button className="nav-open-btn" aria-label="open menu" data-nav-toggler="">

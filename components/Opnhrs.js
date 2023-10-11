@@ -1,6 +1,6 @@
 'use client'
 
-import Image from "next/image";
+
 import React, { Component } from 'react';
 class Opnhrs extends Component {
     constructor(props) {
@@ -10,8 +10,8 @@ class Opnhrs extends Component {
         today: '',
         hour: 0,
         minutes: 0,
-        suffix: 'AM',
-        status: 'closed',
+        suffix: 'Uhr',
+        status: 'geschlossen',
       };
     }
   
@@ -26,9 +26,9 @@ class Opnhrs extends Component {
       const hour = now.getHours();
       const minutes = now.getMinutes();
   
-      const suffix = hour >= 12 ? 'PM' : 'AM';
+      const suffix = hour >= 24 ? 'Uhr' : 'Uhr';
   
-      let status = 'closed';
+      let status = 'Geschlossen';
   
    
   
@@ -38,21 +38,21 @@ class Opnhrs extends Component {
 
    
   
-      if (todayOpeningHours && todayOpeningHours !== 'Closed') {
+      if (todayOpeningHours && todayOpeningHours !== 'geschlossen') {
         const [openHour, closeHour] = todayOpeningHours
           .split('-')
           .map((time) => parseInt(time));
     
        
         if (hour >= openHour && hour < closeHour) {
-          status = 'open';
+          status = 'offen';
         }
       }
   
   
       this.setState({
         today: this.getWeekday(dayOfWeek),
-        hour: hour % 12 || 12,
+        hour: hour % 24 || 24,
         minutes: minutes < 10 ? '0' + minutes : minutes,
         suffix: suffix,
         status: status,
@@ -61,13 +61,13 @@ class Opnhrs extends Component {
   
     getWeekday = (dayOfWeek) => {
       const weekdays = [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
+        'Sonntag',
+        'Montag',
+        'Dienstag',
+        'Mittwoch',
+        'Donnerstag',
+        'Freitag',
+        'Samstag',
       ];
       return weekdays[dayOfWeek];
     };
@@ -77,7 +77,7 @@ class Opnhrs extends Component {
   
       return (
         <div>
-        <p>{`It's ${today} ${hour}:${minutes} ${suffix} - we're ${status}!`}</p>  
+        <p>{`Es ist ${today} ${hour}:${minutes} ${suffix} - Wir haben ${status}!`}</p>  
         </div>
       );
     }

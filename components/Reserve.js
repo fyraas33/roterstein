@@ -9,10 +9,10 @@ import Opnhr from './Opnhr'
 function Reserve() {
   const generateOptions = () => {
     const options = [];
-    for (let i = 1; i <= 50; i++) {
+    for (let i = 2; i <= 50; i++) {
       options.push(
         <option key={i} value={`${i}-person`}>
-          {i} Person
+          {i} Personen
         </option>
       );
     }
@@ -27,8 +27,8 @@ function Reserve() {
 >
     
   <div className="container">
-  <p className="label-2 section-subtitle" id="about-label">
-      your host
+  <p className=" section-subtitle ownr" id="about-label">
+  IHRE GASTGEBER
       </p>
     <div className="quote">”</div>
     <p className="headline-2 testi-text">
@@ -52,7 +52,7 @@ function Reserve() {
              
                 />
                 
-          <p className="label-2 profile-name">AZLLAN BLAKAJ</p>
+          <p className=" profile-name ownr">AZLLAN BLAKAJ</p>
         </div>
         <div className="profile" id='prfl2'>
 
@@ -66,7 +66,7 @@ function Reserve() {
 
   />
   
-<p className="label-2 profile-name">SAMIR DEMIRI</p>
+<p className=" profile-name ownr">SAMIR DEMIRI</p>
 </div>
    </div>
     
@@ -79,24 +79,31 @@ function Reserve() {
       <form action="" className="form-left">
         <h2 className="headline-1 text-center">Online Reservation</h2>
         <p className="form-text text-center">
-          Booking request{" "}
+        Buchungsanfrage
           <a href="tel:043 541 82 62" className="link">
           043 541 82 62  
           </a>
-          or fill out the order form
+          oder füllen Sie das Reservierungsformular aus.
         </p>
         <div className="input-wrapper">
           <input
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="Name*"
             autoComplete="off"
             className="input-field"
           />
           <input
             type="tel"
             name="phone"
-            placeholder="Phone Number"
+            placeholder="Telefonnummer*"
+            autoComplete="off"
+            className="input-field"
+          />
+               <input
+            type="tel"
+            name="phone"
+            placeholder="Email*"
             autoComplete="off"
             className="input-field"
           />
@@ -104,59 +111,61 @@ function Reserve() {
         <div className="input-wrapper">
           <div className="">
    
-          <ion-icon name="person-outline" aria-hidden="true" />
+       
             <select name="person" className="input-field">
+              <option value="1 Person">1 Person</option>
             {generateOptions()}
             </select>
-            <ion-icon name="chevron-down" aria-hidden="true" />
+       
           
           </div>
           <div className="">
-            <ion-icon name="calendar-clear-outline" aria-hidden="true" />
+       
          
             <input
               type="date"
               name="reservation-date"
               className="input-field"
+              lang="de-DE"
             />
-            <ion-icon name="chevron-down" aria-hidden="true" />
+          
        
           </div>
           <div className="">
-            <ion-icon name="time-outline" aria-hidden="true" />
+         
           
             <select name="person" className="input-field">
-              <option value="08:00am">08 : 00 am</option>
-              <option value="09:00am">09 : 00 am</option>
-              <option value="010:00am">10 : 00 am</option>
-              <option value="011:00am">11 : 00 am</option>
-              <option value="012:00am">12 : 00 am</option>
-              <option value="01:00pm">01 : 00 pm</option>
-              <option value="02:00pm">02 : 00 pm</option>
-              <option value="03:00pm">03 : 00 pm</option>
-              <option value="04:00pm">04 : 00 pm</option>
-              <option value="05:00pm">05 : 00 pm</option>
-              <option value="06:00pm">06 : 00 pm</option>
-              <option value="07:00pm">07 : 00 pm</option>
-              <option value="08:00pm">08 : 00 pm</option>
-              <option value="09:00pm">09 : 00 pm</option>
-              <option value="10:00pm">10 : 00 pm</option>
+              <option value="08:00Uhr">08 : 00 Uhr</option>
+              <option value="09:00Uhr">09 : 00 Uhr</option>
+              <option value="010:00Uhr">10 : 00 Uhr</option>
+              <option value="011:00Uhr">11 : 00 Uhr</option>
+              <option value="012:00Uhr">12 : 00 Uhr</option>
+              <option value="13:00Uhr">13 : 00 Uhr</option>
+              <option value="14:00Uhr">14 : 00 Uhr</option>
+              <option value="15:00Uhr">15 : 00 Uhr</option>
+              <option value="15:00Uhr">16 : 00 Uhr</option>
+              <option value="17:00Uhr">17 : 00 Uhr</option>
+              <option value="18:00Uhr">18 : 00 Uhr</option>
+              <option value="19:00Uhr">19 : 00 Uhr</option>
+              <option value="20:00Uhr">20 : 00 Uhr</option>
+              <option value="21:00Uhr">21 : 00 Uhr</option>
+              <option value="22:00Uhr">22 : 00 Uhr</option>
             </select>
-            <ion-icon name="chevron-down" aria-hidden="true" />
+      
             
           </div>
         </div>
         <textarea
           name="message"
-          placeholder="Remark"
+          placeholder="Nachricht"
           autoComplete="off"
           className="input-field"
           defaultValue={""}
         />
         <motion.button type="submit" className="btn btn-secondary" whileTap={{scale:0.5}}>
-          <span className="text text-1">Book A Table</span>
+          <span className="text text-1">TISCH BUCHEN</span>
           <span className="text text-2" aria-hidden="true">
-            Book A Table
+          TISCH BUCHEN
           </span>
         </motion.button>
       </form>

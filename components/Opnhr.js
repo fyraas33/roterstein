@@ -8,20 +8,20 @@ import Clock from "../assest/Clock";
 
 export default function Opnhr() {
   const [openingHours, setOpeningHours] = useState({
-    Monday: "Closed",
-    Tuesday: "9:00 a.m. - 23:00",
-    Wednesday: "9:00 a.m. - 23:00",
-    Thursday: "9:00 a.m. - 23:00",
-    Friday: "9:00 a.m. - 23:00",
-    Saturday: "9:00 a.m. - 23:00",
-    Sunday: "9:30 a.m. - 22:30",
-    "Public holidays": "9:30 a.m. - 22:30",
-    "Warm cuisine from Tuesday to Sunday": "11:30 a.m. - 14:00 . 17:30 - 22:00",
+    Montag: "Geschlossen",
+    Dienstag: "9:00 Uhr - 23:00",
+    Mittwoch: "9:00 Uhr - 23:00",
+    Donnerstag: "9:00 Uhr - 23:00",
+    Freitag: "9:00 Uhr- 23:00",
+    Samstag: "9:00 Uhr - 23:00",
+    Sonntag: "9:30 Uhr - 22:30",
+    "Feiertage": "9:30 Uhr . - 22:30",
+    "Warme Küche DI bis SO": "11:30 Uhr . - 14:00 . 17:30 - 22:00",
   });
 
   const [currentDayStatus, setCurrentDayStatus] = useState("Closed");
 
-  const currentDay = new Date().toLocaleString("en-us", { weekday: "long" });
+  const currentDay = new Date().toLocaleString("de-DE", { weekday: "long" });
 
   useEffect(() => {
     setCurrentDayStatus(isOpen(currentDay));
@@ -33,7 +33,7 @@ export default function Opnhr() {
     if (openingHoursForDay === "Closed") {
       return "Closed";
     }
-    const [, openTime, closeTime] = openingHoursForDay.match(/(\d+:\d+) a.m. - (\d+:\d+)/i);
+    const [, openTime, closeTime] = openingHoursForDay.match(/(\d+:\d+) Uhr - (\d+:\d+)/i);
 
     const [openHours, openMinutes] = openTime.split(":").map(Number);
     const [closeHours, closeMinutes] = closeTime.split(":").map(Number);
@@ -50,7 +50,7 @@ export default function Opnhr() {
   return (
     <div>
       <div className="opening-hours shadow-xl">
-        <h4 className="opening-hours_title form-text">Opening hours <Clock/>
+        <h4 className="opening-hours_title form-text">Öffnungszeiten <Clock/>
 </h4>
         <ul className="opening-hours_days">
           {Object.keys(openingHours).map((day) => (

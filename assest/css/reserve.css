@@ -11,10 +11,14 @@
 
 
 .testi{
-    background-image:url("../img/hstbg.jpg") !important ;
+    background-image:url("../img/hstbg.png") !important ;
 }
 
 .form-right{
     background-image: url("../img/form-pattern.png") !important;
 }
 
+.ownr{
+    color: #dd3333 !important;
+    text-shadow: 2px 2px #000;
+}

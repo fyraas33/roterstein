@@ -127,36 +127,36 @@ function Navbar() {
           <li className="navbar-item">
             <a href="#about" className="navbar-link hover-underline">
               <div className="separator" />
-              <span className="span" >about us</span>
+              <span className="span" >ÜBER UNS</span>
             </a>
           </li>
           <li className="navbar-item">
             <a href="#menu" className="navbar-link hover-underline">
               <div className="separator" />
-              <span className="span" >Menus</span>
+              <span className="span" >MENÜ</span>
             </a>
           </li>
           <li className="navbar-item">
             <a href="#host" className="navbar-link hover-underline">
               <div className="separator" />
-              <span className="span" >YOUR HOST</span>
+              <span className="span" >GASTGEBER</span>
             </a>
           </li>
           <li className="navbar-item">
             <a href="#reservation" className="navbar-link hover-underline">
               <div className="separator" />
-              <span className="span" >reservation</span>
+              <span className="span" >TISCH BUCHEN</span>
             </a>
           </li>
           <li className="navbar-item">
             <a href="#gallery" className="navbar-link hover-underline">
               <div className="separator" />
-              <span className="span" >gallery</span>
+              <span className="span" >RESTAURANT</span>
             </a>
           </li>
         </ul>
         <div className="text-center">
-          <p className="headline-1 navbar-title">Visit Us</p>
+          <p className="headline-1 navbar-title">Besuchen Sie uns</p>
           <address className="body-4">
           Herrligstrasse 39,  <br />
           8048 Zurich
@@ -166,7 +166,7 @@ function Navbar() {
           info@roter-stein.ch
           </a>
           <div className="separator" />
-          <p className="contact-label">Booking Request</p>
+          <p className="contact-label">Telefonnummer</p>
           <a
             href="tel:043 541 82 62"
             className="body-1 contact-number hover-underline"
@@ -176,9 +176,9 @@ function Navbar() {
         </div>
       </nav>
       <a href="#reservation" className="btn btn-secondary">
-        <span className="text text-1">Find A Table</span>
+        <span className="text text-1">TISCH BUCHEN</span>
         <span className="text text-2" aria-hidden="true">
-          Find A Table
+        TISCH BUCHEN
         </span>
       </a>
       <button className="nav-open-btn" aria-label="open menu" data-nav-toggler="">

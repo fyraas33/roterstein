@@ -83,7 +83,7 @@ function Menu() {
     <div className="menuuu">
       <section className="section menu" aria-label="menu-label" id="menu">
         <div className="container">
-          <p className="section-subtitle text-center label-2">our menu</p>
+          <p className="section-subtitle text-center ownr">Unser Menü</p>
 
           <h2 className="headline-1 section-title text-center">
             Delicious Menu
@@ -148,7 +148,7 @@ function Menu() {
                         className="card-title"
                         onClick={openMainMenuModal}
                       >
-                        MAIN MENU{" "}
+                        HAUPTSPEISEKARTE
                       </a>
                     </h3>
 
@@ -218,7 +218,7 @@ function Menu() {
                         className="card-title"
                         onClick={openSummerCardModal}
                       >
-                        SUMMER CARD
+                        SOMMERKARTE
                       </a>
                     </h3>
 
@@ -288,7 +288,7 @@ function Menu() {
                         className="card-title"
                         onClick={openWildCardModal}
                       >
-                        WILD CARD
+                       WILDKARTE
                       </a>
                     </h3>
 
@@ -358,7 +358,7 @@ function Menu() {
                         className="card-title"
                         onClick={openLnchCardModal}
                       >
-                        LUNCH MENU
+                       MITTAGSMENÜ
                       </a>
                     </h3>
 
@@ -428,7 +428,7 @@ function Menu() {
                         className="card-title"
                         onClick={openMnthCardModal}
                       >
-                        MONTHLY PASS
+                        MONATSKARTE
                       </a>
                     </h3>
 
