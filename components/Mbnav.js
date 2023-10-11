@@ -49,9 +49,9 @@ function Mbnav() {
             </motion.a>
           </li>
           <li className="navbar-item">
-            <motion.a href="#about" className="navbar-link hover-underline" whileTap={{scale:0.5}} >
+            <motion.a href="#host" className="navbar-link hover-underline" whileTap={{scale:0.5}} >
               <div className="separator" />
-              <span className="span" >ÜBER UNS</span>
+              <span className="span" > GASTGEBER</span>
             </motion.a>
           </li>
           <li className="navbar-item">
@@ -61,9 +61,9 @@ function Mbnav() {
             </motion.a>
           </li>
           <li className="navbar-item">
-            <motion.a href="#host" className="navbar-link hover-underline" whileTap={{scale:0.5}} >
+            <motion.a href="#about" className="navbar-link hover-underline" whileTap={{scale:0.5}} >
               <div className="separator" />
-              <span className="span" >GASTGEBER</span>
+              <span className="span" >ÜBER UNS</span>
             </motion.a>
           </li>
           <li className="navbar-item">

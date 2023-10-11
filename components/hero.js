@@ -139,11 +139,11 @@ function Hero() {
       <p className="label-2 section-subtitle slider-reveal ownr">
        lorem &amp; lorem
       </p>
-      <h1 className="display-1 hero-title slider-reveal">
+      <h1 className="display-1 hero-title slider-reveal prgrphha">
 Lorem ipsum dolor sit <br />
 Lorem ipsum dolor sit
       </h1>
-      <p className="body-2 hero-text slider-reveal">
+      <p className="body-2 hero-text slider-reveal prgrphha">
       Lorem ipsum dolor sit &amp; Lorem ipsum dolor sit
       </p>
       <a href="#menu" className="btn btn-primary slider-reveal">
@@ -167,11 +167,11 @@ Lorem ipsum dolor sit
       <p className="label-2 section-subtitle slider-reveal ownr">
       Lorem ipsum 
       </p>
-      <h1 className="display-1 hero-title slider-reveal">
+      <h1 className="display-1 hero-title slider-reveal prgrphha">
       Lorem ipsum dolor sit <br />
       Lorem ipsum 
       </h1>
-      <p className="body-2 hero-text slider-reveal">
+      <p className="body-2 hero-text slider-reveal prgrphha">
       Lorem ipsum dolor sit &amp; Lorem ipsum dolor sit
       </p>
       <a href="#menu" className="btn btn-primary slider-reveal">
@@ -195,11 +195,11 @@ Lorem ipsum dolor sit
       <p className="label-2 section-subtitle slider-reveal ownr">
        lorem &amp; lorem
       </p>
-      <h1 className="display-1 hero-title slider-reveal">
+      <h1 className="display-1 hero-title slider-reveal prgrphha">
       Lorem ipsum dolor sit <br />
       Lorem ipsum 
       </h1>
-      <p className="body-2 hero-text slider-reveal">
+      <p className="body-2 hero-text slider-reveal prgrphha">
       Lorem ipsum dolor sit &amp; Lorem ipsum dolor sit
       </p>
       <a href="#menu" className="btn btn-primary slider-reveal">

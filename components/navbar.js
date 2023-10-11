@@ -125,9 +125,9 @@ function Navbar() {
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#about" className="navbar-link hover-underline">
+            <a href="#host" className="navbar-link hover-underline">
               <div className="separator" />
-              <span className="span" >ÜBER UNS</span>
+              <span className="span" > GASTGEBER</span>
             </a>
           </li>
           <li className="navbar-item">
@@ -137,9 +137,9 @@ function Navbar() {
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#host" className="navbar-link hover-underline">
+            <a href="#about" className="navbar-link hover-underline">
               <div className="separator" />
-              <span className="span" >GASTGEBER</span>
+              <span className="span" >ÜBER UNS</span>
             </a>
           </li>
           <li className="navbar-item">

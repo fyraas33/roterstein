@@ -2,8 +2,8 @@
 
 import React, { useEffect } from "react";
 import Image from "next/image";
-import abt from "../assest/img/about-banner.jpg";
-import abt2 from "../assest/img/about-abs-image.jpg";
+import abt from "../assest/img/about-banner.png";
+import abt2 from "../assest/img/about-abs-image.png";
 import {motion} from 'framer-motion'
 import abt4 from "../assest/img/shape-3.png";
 import Aos from "aos";
@@ -24,12 +24,12 @@ const parg="  Lorem Ipsum is simply dummy text of the printingand typesettingind
       <section
         className="section about text-center"
         aria-labelledby="about-label"
-        id="about" 
+        id="host" 
       >
         <div className="container">
           <div className="about-content">
             <p className="section-subtitle ownr" id="about-label" data-aos="fade-right">
-            ÜBER UNS
+            GASTGEBER
             </p>
             <h2 className="headline-1 section-title" data-aos="fade-up">
               {" "}

@@ -22,16 +22,16 @@ function Reserve() {
     <div>
         <section
   className="section testi text-center has-bg-image "
- id='host'
+ id='about'
   aria-label="testimonials"
 >
     
   <div className="container">
   <p className=" section-subtitle ownr" id="about-label">
-  IHRE GASTGEBER
+  ÜBER UNS
       </p>
     <div className="quote">”</div>
-    <p className="headline-2 testi-text">
+    <p className="headline-2 testi-text prgrphha">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio pariatur ipsa nihil, possimus saepe,
     </p>
     <div className="wrapper">
@@ -39,36 +39,7 @@ function Reserve() {
       <div className="separator" />
       <div className="separator" />
     </div>
-   <div className='hostt'>
-        <div className="profile" id='prfl1'>
-    
-              <Image
-                  src={rsrv}
-                  alt=" Logo"
-                 className='img'
-                  width={100}
-                  height={100}
-                  priority
-             
-                />
-                
-          <p className=" profile-name ownr">AZLLAN BLAKAJ</p>
-        </div>
-        <div className="profile" id='prfl2'>
 
-<Image
-    src={rsrv1}
-    alt=" Logo"
-   className='img'
-    width={100}
-    height={100}
-    priority
-
-  />
-  
-<p className=" profile-name ownr">SAMIR DEMIRI</p>
-</div>
-   </div>
     
   </div>
 </section>
