@@ -1,20 +1,26 @@
-import { connectMongoDB } from "@/lib/mongodb";
-import User from "@/models/user";
+import dbConnect from "@/backend/config/dbConnect";
+import User from "@/backend/models/user";
 import { NextResponse } from "next/server";
-import bcrypt from "bcryptjs";
 
-export async function POST(req) {
-  try {
-    const { name, email, password } = await req.json();
-    const hashedPassword = await bcrypt.hash(password, 10);
-    await connectMongoDB();
-    await User.create({ name, email, password: hashedPassword });
+export async function POST(req, res) {
+    try {
+       await dbConnect();
+       const body = await req.json();
+      const user= await User.create(body);
 
-    return NextResponse.json({ message: "User registered." }, { status: 201 });
-  } catch (error) {
-    return NextResponse.json(
-      { message: "An error occurred while registering the user." },
-      { status: 500 }
-    );
-  }
+
+        return NextResponse.json({
+            message:"User Created successfully!",
+            user
+        }, {
+            status: 200
+        })
+        
+
+    }catch (e) {
+        return NextResponse.json(
+            { message: "Server error, please try again!" },
+            { status: 500 }
+        )
+    }
 }

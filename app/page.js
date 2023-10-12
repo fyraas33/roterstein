@@ -16,7 +16,7 @@ export default function Home() {
   
   return (
     <main>
-    
+
   <div className='mobnav'> <Navbar />  </div>
     <div className='dskt'><Mbnav/></div>
       <Hero/>

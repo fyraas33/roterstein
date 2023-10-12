@@ -1,48 +1,65 @@
-import { connectMongoDB } from "@/lib/mongodb";
-import User from "@/models/user";
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+
 import bcrypt from "bcryptjs";
+import User from "@/backend/models/user";
+import dbConnect from "@/backend/config/dbConnect";
+
 
 export const authOptions = {
-  providers: [
-    CredentialsProvider({
-      name: "credentials",
-      credentials: {},
+    session: {
+      strategy: "jwt",
+    },
+    providers: [
+      CredentialsProvider({
+        async authorize(credentials, req) {
+          dbConnect();
 
-      async authorize(credentials) {
-        const { email, password } = credentials;
+          const { email, password } = credentials;
 
-        try {
-          await connectMongoDB();
-          const user = await User.findOne({ email });
+          const user = await User.findOne({ email }).select("+password");
 
           if (!user) {
-            return null;
+            throw new Error("Invalid Email or Password");
           }
 
-          const passwordsMatch = await bcrypt.compare(password, user.password);
+          const isPasswordMatched = await bcrypt.compare(
+            password,
+            user.password
+          );
 
-          if (!passwordsMatch) {
-            return null;
+          if (!isPasswordMatched) {
+            throw new Error("Invalid Email or Password");
           }
 
           return user;
-        } catch (error) {
-          console.log("Error: ", error);
-        }
+        },
+      }),
+    
+    ],
+    callbacks: {
+      jwt: async ({ token, user }) => {
+        user && (token.user = user);
+
+        return token;
       },
-    }),
-  ],
-  session: {
-    strategy: "jwt",
-  },
-  secret: process.env.NEXTAUTH_SECRET,
-  pages: {
-    signIn: "/",
-  },
-};
+      session: async ({ session, token }) => {
+        session.user = token.user;
 
-const handler = NextAuth(authOptions);
+        // delete password from session
+        delete session?.user?.password;
 
-export { handler as GET, handler as POST };
+        return session;
+      },
+    },
+    pages: {
+      signIn: "/login",
+    },
+    secret: process.env.NEXTAUTH_SECRET,
+  };
+
+  const handler = NextAuth(authOptions);
+  export { handler as GET, handler as POST };
+
+
+   

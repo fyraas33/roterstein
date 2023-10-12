@@ -63,6 +63,7 @@ function Reserve() {
             placeholder="Name*"
             autoComplete="off"
             className="input-field"
+            required
           />
           <input
             type="tel"
@@ -70,13 +71,15 @@ function Reserve() {
             placeholder="Telefonnummer*"
             autoComplete="off"
             className="input-field"
+            required
           />
                <input
-            type="tel"
-            name="phone"
+            type="email"
+            name="email"
             placeholder="Email*"
             autoComplete="off"
             className="input-field"
+            required
           />
         </div>
         <div className="input-wrapper">

@@ -1,10 +1,10 @@
-import { connectMongoDB } from "@/lib/mongodb";
-import User from "@/models/user";
+import dbConnect from "@/backend/config/dbConnect";
+import User from "@/backend/models/user";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
-    await connectMongoDB();
+    await dbConnect();
     const { email } = await req.json();
     const user = await User.findOne({ email }).select("_id");
     console.log("user: ", user);

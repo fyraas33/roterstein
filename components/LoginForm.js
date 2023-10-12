@@ -34,53 +34,84 @@ export default function LoginForm() {
   };
 
   return (
-    <div>
-    <div className="container">
- <div className="screen">
-   <div className="screen__content">
-     <form  onSubmit={handleSubmit} className="login">
+    <div className="grid h-screen place-items-center">
+  
 
-       <div className="login__field">
-         <i className="login__icon fas fa-user" />
-         <input
-          onChange={(e) => setEmail(e.target.value)}
-           type="text"
-           className="login__input"
-           placeholder="email "
-         />
-       </div>
-       
-       <div className="login__field">
-         <i className="login__icon fas fa-lock" />
-         <input
-           onChange={(e) => setPassword(e.target.value)}
-           type="password"
-           className="login__input"
-           placeholder="Password"
-         />
-       </div>
-       <button className="button login__submit">
-         <span className="button__text">Log In Now</span>
-         <i className="button__icon fas fa-chevron-right" />
-       </button>
-       {error && (
+
+  <div className="container mx-auto">
+  <div className="flex justify-center px-6 my-12">
+    {/* Row */}
+    <div className="w-full xl:w-3/4 lg:w-11/12 flex">
+      {/* Col */}
+      <div
+        className="w-full picss h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg"
+    
+      />
+      {/* Col */}
+      <div className="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
+        <h3 className="pt-4 text-2xl text-center">Welcome Back!</h3>
+        <form  onSubmit={handleSubmit} className="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+          <div className="mb-4">
+            <label
+              className="block mb-2 text-sm font-bold text-gray-700"
+              htmlFor="username"
+            >
+              Username
+            </label>
+            <input
+            onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="username"
+              type="text"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              className="block mb-2 text-sm font-bold text-gray-700"
+              htmlFor="password"
+            >
+              Password
+            </label>
+            <input
+             onChange={(e) => setPassword(e.target.value)}
+             className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+             id="password"
+              type="password"
+              placeholder="******************"
+              required
+            />
+            {error && (
            <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
              {error}
            </div>
          )}
-     </form>
-    
-   </div>
-   <div className="screen__background">
-     <span className="screen__background__shape screen__background__shape4" />
-     <span className="screen__background__shape screen__background__shape3" />
-     <span className="screen__background__shape screen__background__shape2" />
-     <span className="screen__background__shape screen__background__shape1" />
-   </div>
- </div>
+          </div>
+         
+          <div className="mb-6 text-center">
+        
+            <button  className=" w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline">
+         <span className="button__text">Log In </span>
+         <i className="button__icon fas fa-chevron-right" />
+       </button>
+          </div>
+          <hr className="mb-6 border-t" />
+          <div className="text-center">
+            <p
+              className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+           
+            >
+             Powered by oaase©
+            </p>
+          </div>
+         
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
 
-  
  
    </div>
   );

@@ -7,6 +7,7 @@ import logo from "../assest/img/logo.png"
 import Image from 'next/image'
 import "../assest/css/navbar.css"
 import {motion} from 'framer-motion'
+
 function Mbnav() {
  
   
@@ -72,6 +73,7 @@ function Mbnav() {
               <span className="span" >RESTAURANT</span>
             </motion.a>
           </li>
+      
         </ul>
        
       </nav>

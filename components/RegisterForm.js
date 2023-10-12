@@ -9,7 +9,7 @@ export default function RegisterForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
+const [userType, setUserType]= useState("");
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -74,6 +74,21 @@ export default function RegisterForm() {
            className="login__input"
            placeholder="User name "
          />
+       </div>
+       <div className="login__field">
+   
+         <input
+       onChange={(e) => setUserType(e.target.value)}
+           type="radio"
+           className="usertype"
+         
+         />user
+          <input
+        onChange={(e) => setUserType(e.target.value)}
+       type="radio"
+       className="usertype"
+      
+     />admin
        </div>
        <div className="login__field">
          <i className="login__icon fas fa-user" />
