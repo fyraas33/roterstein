@@ -24,7 +24,7 @@ function Dash() {
       <div className="profile">
         <div
           className="profile-img bg-img"
-          style={{ backgroundImage: "url(img/3.jpeg)" }}
+      
         />
         <h4>David Green</h4>
         <small>Art Director</small>
@@ -92,7 +92,7 @@ function Dash() {
           <div className="user">
             <div
               className="bg-img"
-              style={{ backgroundImage: "url(img/1.jpeg)" }}
+          
             />
             <span className="las la-power-off" />
             <button   onClick={() => signOut()}>Logout</button>
@@ -104,7 +104,7 @@ function Dash() {
       <div className="page-header">
         <h1>Dashboard</h1>
         <small>Home / Dashboard</small>
-      </div>
+      </div> 
       <div className="page-content">
         <div className="analytics">
           <div className="card">
@@ -205,7 +205,7 @@ function Dash() {
                     <div className="client">
                       <div
                         className="client-img bg-img"
-                        style={{ backgroundImage: "url(img/3.jpeg)" }}
+                      
                       />
                       <div className="client-info">
                         <h4>Andrew Bruno</h4>
@@ -230,7 +230,7 @@ function Dash() {
                     <div className="client">
                       <div
                         className="client-img bg-img"
-                        style={{ backgroundImage: "url(img/1.jpeg)" }}
+                      
                       />
                       <div className="client-info">
                         <h4>Exty Bruno</h4>
@@ -255,7 +255,7 @@ function Dash() {
                     <div className="client">
                       <div
                         className="client-img bg-img"
-                        style={{ backgroundImage: "url(img/1.jpeg)" }}
+                        
                       />
                       <div className="client-info">
                         <h4>Exty Bruno</h4>
@@ -282,7 +282,7 @@ function Dash() {
                     <div className="client">
                       <div
                         className="client-img bg-img"
-                        style={{ backgroundImage: "url(img/3.jpeg)" }}
+                    
                       />
                       <div className="client-info">
                         <h4>Andrew Bruno</h4>
@@ -307,7 +307,7 @@ function Dash() {
                     <div className="client">
                       <div
                         className="client-img bg-img"
-                        style={{ backgroundImage: "url(img/1.jpeg)" }}
+                    
                       />
                       <div className="client-info">
                         <h4>Exty Bruno</h4>
@@ -334,7 +334,7 @@ function Dash() {
                     <div className="client">
                       <div
                         className="client-img bg-img"
-                        style={{ backgroundImage: "url(img/1.jpeg)" }}
+                    
                       />
                       <div className="client-info">
                         <h4>Exty Bruno</h4>
@@ -361,7 +361,7 @@ function Dash() {
                     <div className="client">
                       <div
                         className="client-img bg-img"
-                        style={{ backgroundImage: "url(img/3.jpeg)" }}
+                   
                       />
                       <div className="client-info">
                         <h4>Andrew Bruno</h4>
@@ -386,7 +386,7 @@ function Dash() {
                     <div className="client">
                       <div
                         className="client-img bg-img"
-                        style={{ backgroundImage: "url(img/1.jpeg)" }}
+                    
                       />
                       <div className="client-info">
                         <h4>Exty Bruno</h4>
@@ -411,7 +411,7 @@ function Dash() {
                     <div className="client">
                       <div
                         className="client-img bg-img"
-                        style={{ backgroundImage: "url(img/1.jpeg)" }}
+               
                       />
                       <div className="client-info">
                         <h4>Exty Bruno</h4>
