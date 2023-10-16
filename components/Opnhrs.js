@@ -1,6 +1,6 @@
 'use client'
 
-
+import "../assest/css/hero.css"
 import React, { Component } from 'react';
 class Opnhrs extends Component {
     constructor(props) {

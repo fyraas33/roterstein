@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
     "@ionic/react": "^7.4.3",
+    "@material-tailwind/react": "^2.1.2",
+    "@material-ui/icons": "^4.11.3",
     "@reacticons/ionicons": "^7.1.0",
     "aos": "^2.3.4",
     "bcryptjs": "^2.4.3",
@@ -40,6 +43,7 @@
     "eslint-config-next": "13.5.4",
     "file-loader": "^6.2.0",
     "postcss": "^8",
+    "sass": "^1.69.3",
     "tailwindcss": "^3",
     "typescript": "^5"
   }

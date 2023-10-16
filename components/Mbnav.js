@@ -7,11 +7,11 @@ import logo from "../assest/img/logo.png"
 import Image from 'next/image'
 import "../assest/css/navbar.css"
 import {motion} from 'framer-motion'
-
+import { useSession } from 'next-auth/react';
+import Link from "next/link"
 function Mbnav() {
- 
-  
-
+  const { data: session } = useSession(); 
+  const isAdmin = session?.user?.role === 'admin';
   return (
     <div className='navbarr'>
     
@@ -73,7 +73,15 @@ function Mbnav() {
               <span className="span" >RESTAURANT</span>
             </motion.a>
           </li>
-      
+          
+          {isAdmin && (
+                  <li className="navbar-item">
+                    <Link href="/dashboard"  target="blank" className="navbar-link hover-underline" >
+                      <div className="separator" />
+                      <span className="span">dashboard</span>
+                    </Link>
+                  </li>
+                )}
         </ul>
        
       </nav>

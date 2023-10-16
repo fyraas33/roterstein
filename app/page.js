@@ -1,5 +1,5 @@
 
-
+import './globals.css'
 import Image from 'next/image'
 import Navbar from "../components/navbar"
 import Hero from "../components/hero"
@@ -10,7 +10,7 @@ import Menu from "../components/Menu"
 import Footer from "../components/Footer"
 
 import Gallery from "../components/Gallery"
-import "../assest/css/hero.css"
+
 
 export default function Home() {
   

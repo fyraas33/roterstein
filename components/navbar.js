@@ -6,8 +6,11 @@ import logo from "../assest/img/logo.png"
 import Image from 'next/image'
 import "../assest/css/navbar.css"
 import { Icon } from '@iconify/react';
-
+import { useSession } from 'next-auth/react';
+import Link from "next/link"
 function Navbar() {
+  const { data: session } = useSession(); 
+  const isAdmin = session?.user?.role === 'admin';
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   useEffect(() => {
@@ -154,6 +157,14 @@ function Navbar() {
               <span className="span" >RESTAURANT</span>
             </a>
           </li>
+          {isAdmin && (
+                  <li className="navbar-item">
+                    <Link href="/dashboard" target="blank" className="navbar-link hover-underline">
+                      <div className="separator" />
+                      <span className="span">dashboard</span>
+                    </Link>
+                  </li>
+                )}
         </ul>
         <div className="text-center">
           <p className="headline-1 navbar-title">Besuchen Sie uns</p>
