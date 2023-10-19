@@ -2,7 +2,7 @@ import MenuDetails from "../../../components/MenuDetails";
 
 const getMenuById = async(id) =>{
     try {
-      const res = await fetch(`api/menu/${id}`, {
+      const res = await fetch(`http://localhost:3000/api/menu/${id}`, {
         cache: "no-store",
       });
       if (!res.ok){

@@ -7,7 +7,7 @@ import Rsvrmvbtn from "./Rsvrmvbtn"
 
 const getReserve = async() =>{
     try {
-      const res =   await fetch('api/reserve', {
+      const res =   await fetch('http://localhost:3000/api/reserve', {
             cache:"no-store",
         });
 

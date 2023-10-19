@@ -30,7 +30,7 @@ if(status === 'unauthenticated'){
     }
     try {
       const imageUrl = await uploadImage()
-      const res = await fetch("api/menu", {
+      const res = await fetch("http://localhost:3000/api/menu", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -7,7 +7,7 @@ const router = useRouter();
 const rmvReserve = async() => {
   const confirmed = confirm('Are you sure ?');
   if (confirmed) {
-   const res =  await fetch(`api/reserve?id=${id}` , {
+   const res =  await fetch(`http://localhost:3000/api/reserve?id=${id}` , {
       method : 'DELETE',
     });
     if (res.ok){
