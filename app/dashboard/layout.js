@@ -1,7 +1,7 @@
 import Sidebaar from "@/dashcomponent/Sidebar";
 import "@/assest/css/dash.css"
 
-export default function({children}){
+export default function Layout ({children}){
 return(
 
 <div>
