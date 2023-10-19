@@ -7,7 +7,9 @@ import Rsvrmvbtn from "./Rsvrmvbtn"
 
 const getReserve = async() =>{
     try {
-      const res =   await fetch('http://localhost:3000/api/reserve', {
+
+     const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const res =   await fetch(`${apiUrl}/api/reserve`, {
             cache:"no-store",
         });
 

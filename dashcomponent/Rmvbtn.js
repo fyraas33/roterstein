@@ -7,7 +7,8 @@ const router = useRouter();
 const rmvMenu = async() => {
   const confirmed = confirm('Are you sure ?');
   if (confirmed) {
-   const res =  await fetch(`http://localhost:3000/api/menu?id=${id}` , {
+    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const res =   await fetch(`${apiUrl}/api/menu?id=${id}` , {
       method : 'DELETE',
     });
     if (res.ok){

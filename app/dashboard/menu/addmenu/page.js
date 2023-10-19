@@ -30,7 +30,8 @@ if(status === 'unauthenticated'){
     }
     try {
       const imageUrl = await uploadImage()
-      const res = await fetch("http://localhost:3000/api/menu", {
+      const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const res =   await fetch(`${apiUrl}/api/menu`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

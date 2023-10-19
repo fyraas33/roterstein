@@ -15,7 +15,8 @@ import Link from "next/link";
 
 const getMenu = async() =>{
   try {
-    const res =   await fetch('http://localhost:3000/api/menu', {
+    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const res =   await fetch(`${apiUrl}/api/menu`, {
           cache:"no-store",
       });
 

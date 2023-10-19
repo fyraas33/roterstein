@@ -7,7 +7,9 @@ const router = useRouter();
 const rmvReserve = async() => {
   const confirmed = confirm('Are you sure ?');
   if (confirmed) {
-   const res =  await fetch(`http://localhost:3000/api/reserve?id=${id}` , {
+    
+    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const res =   await fetch(`${apiUrl}/api/api/reserve?id=${id}` , { 
       method : 'DELETE',
     });
     if (res.ok){
