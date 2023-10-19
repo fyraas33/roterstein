@@ -22,7 +22,7 @@ export default function Opnhr() {
 
   const currentDay = new Date().toLocaleString("de-DE", { weekday: "long" });
 
-  const isOpen = (day) => {
+  const isOpen = useCallback((day) => {
     const currentTime = new Date();
     const openingHoursForDay = openingHours[day];
     if (openingHoursForDay === "Geschlossen") {
@@ -40,11 +40,11 @@ export default function Opnhr() {
     closingTime.setHours(closeHours, closeMinutes, 0);
 
     return currentTime >= openingTime && currentTime <= closingTime ? "Open" : "Closed";
-  };
+  },[openingHours]);
 
   useEffect(() => {
     setCurrentDayStatus(isOpen(currentDay));
-  }, [currentDay]);
+  }, [currentDay, isOpen]);
 
   return (
     <div>
