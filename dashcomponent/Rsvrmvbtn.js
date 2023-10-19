@@ -7,7 +7,7 @@ const router = useRouter();
 const rmvReserve = async() => {
   const confirmed = confirm('Are you sure ?');
   if (confirmed) {
-   const res =  await fetch(`https://roterstein.vercel.app/api/reserve?id=${id}` , {
+   const res =  await fetch(`api/reserve?id=${id}` , {
       method : 'DELETE',
     });
     if (res.ok){

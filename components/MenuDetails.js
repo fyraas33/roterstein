@@ -13,7 +13,7 @@ import "../assest/css/menu.css";
 
 const getMenu = async(id) =>{
   try {
-    const res =   await fetch(`https://roterstein.vercel.app/api/menu/${id}`, {
+    const res =   await fetch(`api/menu/${id}`, {
           cache:"no-store",
       });
 

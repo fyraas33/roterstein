@@ -7,7 +7,7 @@ import Rsvrmvbtn from "./Rsvrmvbtn"
 
 const getReserve = async() =>{
     try {
-      const res =   await fetch('https://roterstein.vercel.app/api/reserve', {
+      const res =   await fetch('api/reserve', {
             cache:"no-store",
         });
 

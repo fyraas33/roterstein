@@ -8,7 +8,7 @@ import { url } from 'inspector';
 
 const getMenu = async() =>{
     try {
-      const res =   await fetch('https://roterstein.vercel.app/api/menu', {
+      const res =   await fetch('api/menu', {
             cache:"no-store",
         });
 
