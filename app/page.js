@@ -1,6 +1,6 @@
 
 import './globals.css'
-import Image from 'next/image'
+
 import Navbar from "../components/navbar"
 import Hero from "../components/hero"
 import About from "../components/About"

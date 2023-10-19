@@ -10,3 +10,8 @@
 .abttt span {
     display: inline  !important;
 }
+
+
+.grid-list {
+    background-color: transparent !important;
+}

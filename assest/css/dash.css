@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-    --main-color: #22BAA0;
+    --main-color: #DD3333;
     --color-dark: #34425A;
     --text-grey: #B0B0B0;
 }
@@ -33,7 +33,7 @@
     background: var(--color-dark);
     transition: left 300ms;
 }
-
+.lgout:hover{color:#DD3333 ;}
 .side-header {
     box-shadow: 0px 5px 5px -5px rgb(0 0 0 /10%);
     background: var(--main-color);
@@ -89,10 +89,12 @@
 
 .profile-img {
     height: 80px;
-    width: 80px;
+    width: 105px;
     display: inline-block;
     margin: 0 auto .5rem auto;
     border: 3px solid #899DC1;
+    background-image: url("../img/dsds.png");
+   
 }
 
 .profile h4 {
@@ -118,14 +120,14 @@
     padding: 1.2rem 0rem;
 }
 
-.side-menu a.active {
-    background: #2B384E;
-}
+
 
 .side-menu a.active span, .side-menu a.active small {
     color: #fff;
 }
-
+.side-menu a:hover {
+    background: #2B384E;
+}
 .side-menu a span {
     display: block;
     text-align: center;
@@ -459,16 +461,7 @@ table tbody tr {
     margin-right: .5rem;
 }
 
-.paid {
-    display: inline-block;
-    text-align: center;
-    font-weight: 600;
-    color: var(--main-color);
-    background: #e5f8ed;
-    padding: .5rem 1rem;
-    border-radius: 20px;
-    font-size: .8rem;
-}
+
 
 @media only screen and (max-width: 1200px) {
     .analytics {

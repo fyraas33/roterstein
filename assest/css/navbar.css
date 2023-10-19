@@ -50,7 +50,7 @@
    */
 
   /* font-family */
-  --fontFamily-forum: "Forum", cursive;
+  --fontFamily-forum: "Arial", cursive;
 
   /* font-size */
   --fontSize-display-1: calc(1.3rem + 6.7vw);
@@ -1189,7 +1189,7 @@ body.nav-active {
 
 .menu-card {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
 }
 

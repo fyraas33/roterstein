@@ -30,3 +30,19 @@ export async function POST(req) {
    }
  }
  
+ export async function GET() {
+
+  await dbConnect();
+  const reserve = await Reserve.find();
+  return NextResponse.json({reserve});
+
+}
+
+export async function DELETE(req) {
+
+const id = req.nextUrl.searchParams.get("id");
+await dbConnect();
+await Reserve.findByIdAndDelete(id);
+return NextResponse.json({message: "reservation deleted"}, {status:200})
+
+}

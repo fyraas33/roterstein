@@ -94,8 +94,8 @@ const generateOptions = () => {
   ÜBER UNS
       </p>
     <div className="quote">”</div>
-    <p className="headline-2 testi-text prgrphha">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio pariatur ipsa nihil, possimus saepe,
+    <p className=" leading-tight text-5xl font-medium testi-text prgrphha">
+    Willkommen in unserem einzigartigen Restaurant, wo die Aromen Italiens und die Genüsse der Schweiz in perfekter Harmonie verschmelzen. Geniessen Sie hausgemachte Pasta, knusprige Pizzen, zarte Fleisch- und Fischgerichte in einer gemütlichen Atmosphäre. Erleben Sie bei uns die Fusion zweier bemerkenswerter Küchen für ein unvergessliches kulinarisches Erlebnis.
     </p>
     <div className="wrapper">
       <div className="separator" />
@@ -114,8 +114,8 @@ const generateOptions = () => {
         <h2 className="headline-1 text-center">Online Reservation</h2>
         <p className="form-text text-center">
         Buchungsanfrage
-          <a href="tel:043 541 82 62" className="link">
-          043 541 82 62  
+                     <a href="tel:043 541 82 62" className="link">
+                     &nbsp; 043 541 82 62   &nbsp;
           </a>
           oder füllen Sie das Reservierungsformular aus.
         </p>
@@ -211,10 +211,13 @@ const generateOptions = () => {
         />
        <motion.button 
   type="submit" 
-  className={`mail-btn ${isFlying ? 'fly' : ''}`} 
+  className={`btn btn-secondary${isFlying ? 'fly' : ''}`} 
   whileTap={{scale:0.5}}
 >
+         <span className="text text-1">{buttonText}</span>
+        <span className="text text-2" aria-hidden="true">
         {buttonText}
+        </span>
         </motion.button>
        
         {error &&

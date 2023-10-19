@@ -140,11 +140,11 @@ function Hero() {
        lorem &amp; lorem
       </p>
       <h1 className="display-1 hero-title slider-reveal prgrphha">
-Lorem ipsum dolor sit <br />
-Lorem ipsum dolor sit
+      Entdecken Sie unsere kulinarische Vielfalt – <br />
+      ein Fest für die Sinne.
       </h1>
       <p className="body-2 hero-text slider-reveal prgrphha">
-      Lorem ipsum dolor sit &amp; Lorem ipsum dolor sit
+    
       </p>
       <a href="#menu" className="btn btn-primary slider-reveal">
         <span className="text text-1 ownr">View Our Menu</span>
@@ -168,11 +168,11 @@ Lorem ipsum dolor sit
       Lorem ipsum 
       </p>
       <h1 className="display-1 hero-title slider-reveal prgrphha">
-      Lorem ipsum dolor sit <br />
-      Lorem ipsum 
+      Genießen Sie exquisite Gerichte <br />
+      in einem einzigartigen Ambiente.
       </h1>
       <p className="body-2 hero-text slider-reveal prgrphha">
-      Lorem ipsum dolor sit &amp; Lorem ipsum dolor sit
+    
       </p>
       <a href="#menu" className="btn btn-primary slider-reveal">
         <span className="text text-1 ownr">View Our Menu</span>

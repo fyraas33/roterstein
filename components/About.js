@@ -11,7 +11,7 @@ import "aos/dist/aos.css";
 import { spanVariants, pVariants,rotVariants } from '../utils/motion';
 
 function About() {
-const parg="  Lorem Ipsum is simply dummy text of the printingand typesettingindustry lorem Ipsum has been the industrys standard dummy textever since the when an unknown printer took a galley of type andscrambled it to make a type specimen book It has survived not onlyfive centuries, but also the leap into."
+const parg=" Seit dem 1. Juli 2019 wird unser Restaurant von erfahrenen Gastgebern geleitet, die in der Gastronomie langjährige Erfahrung mitbringen. Wir laden Sie herzlich ein, unser neues kulinarisches Angebot und unsere Gastfreundschaft zu erleben. Wir freuen uns auf Ihren Besuch."
 
 
   useEffect(() => {
@@ -31,9 +31,9 @@ const parg="  Lorem Ipsum is simply dummy text of the printingand typesettingind
             <p className="section-subtitle ownr" id="about-label" data-aos="fade-right">
             GASTGEBER
             </p>
-            <h2 className="headline-1 section-title" data-aos="fade-up">
+            <h2 className="headline-2 section-title" data-aos="fade-up">
               {" "}
-              Lorem Ipsum is simply{" "}
+              Wir sind stolz darauf, Gastgeber zu sein.
             </h2>
           
             <motion.p
