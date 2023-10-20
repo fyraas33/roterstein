@@ -7,7 +7,7 @@ import Rsvrmvbtn from "./Rsvrmvbtn"
 
 const getReserve = async () => {
   try {
-    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const apiUrl = process.env.NEXTAUTH_URL || 'https://roterstein.vercel.app'; 
     const res = await fetch(`${apiUrl}/api/reserve`, {
       cache: "no-store",
     });

@@ -8,7 +8,7 @@ import { url } from 'inspector';
 
 const getMenu = async () => {
   try {
-    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const apiUrl = process.env.NEXTAUTH_URL || 'https://roterstein.vercel.app'; 
     const res = await fetch(`${apiUrl}/api/menu`, {
       cache: "no-store",
     });

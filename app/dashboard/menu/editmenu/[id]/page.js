@@ -5,7 +5,7 @@ import EditMenufrm from "@/dashcomponent/EditMenufrm"
 
 const getMenuById = async(id) =>{
   try {
-    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const apiUrl = process.env.NEXTAUTH_URL || 'https://roterstein.vercel.app'; 
     const res =   await fetch(`${apiUrl}/api/menu/${id}`, {
       cache: "no-store",
     });

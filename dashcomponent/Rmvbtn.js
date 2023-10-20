@@ -7,7 +7,7 @@ const router = useRouter();
 const rmvMenu = async() => {
   const confirmed = confirm('Are you sure ?');
   if (confirmed) {
-    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const apiUrl = process.env.NEXTAUTH_URL || 'https://roterstein.vercel.app'; 
     const res =   await fetch(`${apiUrl}/api/menu?id=${id}` , {
       method : 'DELETE',
     });
