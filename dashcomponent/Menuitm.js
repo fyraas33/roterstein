@@ -6,26 +6,36 @@ import { url } from 'inspector';
 
 
 
-const getMenu = async() =>{
-    try {
-      const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000' ; 
-    const res =   await fetch(`${apiUrl}/api/menu`, {
-            cache:"no-store",
-        });
-
-if(!res.ok){
-    throw new Error("failed to fetch menu");
-}
-return res.json();
-    } catch (error) {
-        console.log("error loading menu:" , error);
+const getMenu = async () => {
+  try {
+    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const res = await fetch(`${apiUrl}/api/menu`, {
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      throw new Error("failed to fetch menu");
     }
+    const data = await res.json();
+    // Log the data to check its structure
+    return data;
+  } catch (error) {
+    console.log("error loading menu:" , error);
+    return { menu: [] }; // Return a default value if the fetch fails
+  }
 }
 
 
 export default async function Dmenu() {
 
-  const {menu} = await getMenu();
+  const data = await getMenu();
+  
+  if (!data || !data.menu) {
+    // Handle the case where data or data.menu is undefined
+    console.error('Menu data is not available');
+    return null;
+  }
+
+  const { menu } = data;
 
   return (
     <div>

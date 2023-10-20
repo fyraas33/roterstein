@@ -5,27 +5,36 @@ import Rsvrmvbtn from "./Rsvrmvbtn"
 
 
 
-const getReserve = async() =>{
-    try {
-
-     const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
-    const res =   await fetch(`${apiUrl}/api/reserve`, {
-            cache:"no-store",
-        });
-
-if(!res.ok){
-    throw new Error("failed to fetch reservation");
-}
-return res.json();
-    } catch (error) {
-        console.log("error loading reservation:" , error);
+const getReserve = async () => {
+  try {
+    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const res = await fetch(`${apiUrl}/api/reserve`, {
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      throw new Error("failed to fetch reservation");
     }
+    const data = await res.json();
+
+    return data;
+  } catch (error) {
+    console.log("error loading reservation:" , error);
+    return { reserve: [] };
+  }
 }
 
 
 export default async function Rservation() {
 
-  const {reserve} = await getReserve();
+  const data = await getReserve();
+  
+  if (!data || !data.reserve) {
+    // Handle the case where data or data.reserve is undefined
+    console.error('Reservation data is not available');
+    return null;
+  }
+
+  const { reserve } = data;
 
   return (
     <div>
