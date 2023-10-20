@@ -9,7 +9,7 @@ const rmvReserve = async() => {
   if (confirmed) {
     
     const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
-    const res =   await fetch(`${apiUrl}/api/api/reserve?id=${id}` , { 
+    const res =   await fetch(`${apiUrl}/api/reserve?id=${id}` , { 
       method : 'DELETE',
     });
     if (res.ok){

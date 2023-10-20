@@ -36,7 +36,7 @@ if(status === 'unauthenticated'){
       if(imageUrl != null){
         body.imageUrl = imageUrl
     }
-    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+    const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000' ; 
     const res =   await fetch(`${apiUrl}/api/menu/${id}`, {
                 method:"PUT",
                 headers: {

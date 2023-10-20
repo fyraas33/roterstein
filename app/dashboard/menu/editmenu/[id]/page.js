@@ -22,11 +22,11 @@ export default async function EditMenu({ params }) {
 
   const {id} = params;
   const {menu} = await getMenuById(id);
-  const {title  , imageUrl} = menu;
+  const {title  ,} = menu;
 
   return (
     <div>
-        <EditMenufrm id={id} title={title}  imageUrl={imageUrl} />
+        <EditMenufrm id={id} title={title}   />
     </div>
   )
 }

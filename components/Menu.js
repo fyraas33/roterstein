@@ -8,7 +8,7 @@ import men4 from "../assest/img/shape-6.png";
 import "../assest/css/menu.css";
 
 
-import { useEffect, useState } from "react";
+
 import MenDta from "./MenDta"
 
 

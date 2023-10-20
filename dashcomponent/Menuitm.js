@@ -8,7 +8,7 @@ import { url } from 'inspector';
 
 const getMenu = async() =>{
     try {
-      const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000'; 
+      const apiUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000' ; 
     const res =   await fetch(`${apiUrl}/api/menu`, {
             cache:"no-store",
         });
@@ -61,9 +61,7 @@ export default async function Dmenu() {
              <th>
                <span  />
              </th>
-             <th>
-               <span /> DESCRIPTION
-             </th>
+           
              <th>
               <Link href={"/dashboard/menu/addmenu"}> <span className="las la-plus" /> Add New Menu</Link>
              </th>
@@ -84,7 +82,7 @@ export default async function Dmenu() {
              </td>
              <td>{m.title}</td>
              <td></td>
-             <td><p>{m.description}</p></td>
+            
              <td>
                <div className="actions">
                  <Rmvbtn id={m._id} />
