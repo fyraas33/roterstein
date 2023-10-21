@@ -31,6 +31,7 @@ if(status === 'unauthenticated'){
     }
     try {
       const imageUrl = await uploadImage()
+      const menuPdf = await uploadPdf()
       const apiUrl = process.env.NEXTAUTH_URL || 'https://roterstein.vercel.app'; 
     const res =   await fetch(`${apiUrl}/api/menu`, {
         method: "POST",
