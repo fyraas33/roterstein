@@ -1,12 +1,15 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import "../assest/css/send.css"
 import "../assest/css/reserve.css"
 import {motion} from 'framer-motion'
 import Opnhr from './Opnhr'
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 function Reserve() {
+
+  
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -80,6 +83,9 @@ const generateOptions = () => {
   }
   return options;
 };
+useEffect(() => {
+  Aos.init();
+}, []);
 
   return (
     <div>
@@ -90,11 +96,11 @@ const generateOptions = () => {
 >
     
   <div className="container">
-  <p className=" section-subtitle ownr" id="about-label">
+  <p className=" section-subtitle ownr" id="about-label" data-aos="fade-right">
   ÜBER UNS
       </p>
     <div className="quote">”</div>
-    <p className=" leading-tight text-5xl font-medium testi-text prgrphha">
+    <p className=" leading-tight text-5xl font-medium testi-text prgrphha" data-aos="fade-up">
     Willkommen in unserem einzigartigen Restaurant, wo die Aromen Italiens und die Genüsse der Schweiz in perfekter Harmonie verschmelzen. Geniessen Sie hausgemachte Pasta, knusprige Pizzen, zarte Fleisch- und Fischgerichte in einer gemütlichen Atmosphäre. Erleben Sie bei uns die Fusion zweier bemerkenswerter Küchen für ein unvergessliches kulinarisches Erlebnis.
     </p>
     <div className="wrapper">
@@ -109,8 +115,8 @@ const generateOptions = () => {
 
         <section className="reservation" id='reservation'>
   <div className="container">
-    <div className="form reservation-form bg-black-10">
-      <form action="" className="form-left" onSubmit={handleSubmit}>
+    <div className="form reservation-form bg-black-10" data-aos="fade-up">
+      <form action="" className="form-left" onSubmit={handleSubmit} >
         <h2 className="headline-1 text-center">Online Reservation</h2>
         <p className="form-text text-center">
         Buchungsanfrage
@@ -129,7 +135,7 @@ const generateOptions = () => {
             autoComplete="off"
             className="input-field"
             required
-          />
+            data-aos="fade-right"    />
           <input
           onChange={(e) => setPhone(e.target.value)}
           value={phone}
@@ -139,7 +145,7 @@ const generateOptions = () => {
             autoComplete="off"
             className="input-field"
             required
-          />
+            data-aos="fade-down"   />
                <input
                onChange={(e) => setEmail(e.target.value)}
                value={email}
@@ -149,13 +155,13 @@ const generateOptions = () => {
             autoComplete="off"
             className="input-field"
             required
-          />
+            data-aos="fade-left"   />
         </div>
         <div className="input-wrapper">
           <div className="">
    
        
-          <select name="person" className='input-field' value={person} onChange={(e) => setPerson(e.target.value)}>
+          <select name="person" className='input-field' value={person} onChange={(e) => setPerson(e.target.value)} data-aos="fade-right">
           <option value="0"  disabled   >Anzahl Personen </option>
           {generateOptions()}
         </select>
@@ -172,14 +178,14 @@ const generateOptions = () => {
               className="input-field"
               lang="de-DE"
               onChange={(e) => setDay(e.target.value)}
-            />
+              data-aos="fade-up"  />
           
        
           </div>
           <div className="">
          
           
-            <select name="person" className="input-field" value={time} onChange={(e) => setTime(e.target.value)}>
+            <select name="person" className="input-field" value={time} onChange={(e) => setTime(e.target.value)} data-aos="fade-left">
               <option value="08:00Uhr">08 : 00 Uhr</option>
               <option value="09:00Uhr">09 : 00 Uhr</option>
               <option value="010:00Uhr">10 : 00 Uhr</option>
@@ -208,7 +214,7 @@ const generateOptions = () => {
           autoComplete="off"
           className="input-field"
          
-        />
+          data-aos="flip-up"    />
        <motion.button 
   type="submit" 
   className={`btn btn-secondary${isFlying ? 'fly' : ''}`} 

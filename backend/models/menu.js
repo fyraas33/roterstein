@@ -11,6 +11,10 @@ const menuSchema = new Schema(
         type :String,
         required:true,
     },
+    menuPdf:{
+        type :String,
+        required:true,
+    },
 }, 
 {
     timestamps : true 

@@ -3,11 +3,11 @@ import Menu from "../../../backend/models/menu";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-    const { title, imageUrl} = await req.json();
+    const { title, imageUrl, menuPdf} = await req.json();
   
     try {
       await dbConnect();
-      await Menu.create({ title, imageUrl});
+      await Menu.create({ title, imageUrl ,menuPdf});
   
       return NextResponse.json({
         msg: ["Menu created successfully"],

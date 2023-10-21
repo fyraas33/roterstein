@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 
-import React from "react";
+import React, { useEffect } from "react";
 import men3 from "../assest/img/shape-5.png";
 import men4 from "../assest/img/shape-6.png";
 import "../assest/css/menu.css";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 
 import MenDta from "./MenDta"
@@ -15,6 +16,9 @@ import MenDta from "./MenDta"
 
 export default  function Menu() {
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
 
   
@@ -22,10 +26,10 @@ export default  function Menu() {
     <div className="menuuu">
       <section className="section menu" aria-label="menu-label" id="menu">
         <div className="container">
-          <p className="section-subtitle text-center ownr">Unser Menü</p>
+          <p className="section-subtitle text-center ownr"  data-aos="fade-right">Unser Menü</p>
 
-          <h2 className="headline-1 section-title text-center">
-            Delicious Menu
+          <h2 className="headline-1 section-title text-center" data-aos="fade-left">
+          Kulinarische Verlockungen für Feinschmecker
           </h2>
          
       

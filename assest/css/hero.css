@@ -74,7 +74,7 @@
  .fotter{
   font-size: 1.5rem !important;
   background-color: #f1f1f1 !important; 
-  padding: 14px;
+ 
  }
  .fotter h2{
   font-size: 2rem !important;
@@ -83,7 +83,53 @@
   background-color: #f1f1f1 !important; 
 }
 
-
-
 /**/
 
+
+@media (min-width:1024px) {
+  .ftrimg{
+    margin-top: 28px !important;
+  margin-left: 10%;
+    }
+    .vl {
+      border-left: 3px solid #000;
+      height: 150px;
+   
+    }
+    .gglftr{
+      margin-top: 50px !important;
+      margin-left: 10% !important;
+      color: red;
+      font-size: 2.5rem !important;
+    }
+    .ggllog{
+      margin-left: 20px !important;
+      margin-top: -40px;
+    }
+}
+.gglftr{
+
+  color: red;
+  font-size: 2.5rem !important;
+}
+
+
+@media (min-width:1919px) {
+  .ftrimg{
+  
+  margin-left: 20%;
+    }
+  
+}
+@media (max-width:761px) {
+  .ggllog{
+    margin-left: 35%!important;
+align-items: center;
+margin-right: 35% !important;
+  }
+  
+}
+
+.frtdwn{
+  font-size: 1.5rem;
+}

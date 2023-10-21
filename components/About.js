@@ -4,14 +4,13 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import abt from "../assest/img/about-banner.png";
 import abt2 from "../assest/img/about-abs-image.png";
-import {motion} from 'framer-motion'
+
 import abt4 from "../assest/img/shape-3.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { spanVariants, pVariants,rotVariants } from '../utils/motion';
+
 
 function About() {
-const parg=" Seit dem 1. Juli 2019 wird unser Restaurant von erfahrenen Gastgebern geleitet, die in der Gastronomie langjährige Erfahrung mitbringen. Wir laden Sie herzlich ein, unser neues kulinarisches Angebot und unsere Gastfreundschaft zu erleben. Wir freuen uns auf Ihren Besuch."
 
 
   useEffect(() => {
@@ -31,23 +30,16 @@ const parg=" Seit dem 1. Juli 2019 wird unser Restaurant von erfahrenen Gastgebe
             <p className="section-subtitle ownr" id="about-label" data-aos="fade-right">
             GASTGEBER
             </p>
-            <h2 className="headline-2 section-title" data-aos="fade-up">
-              {" "}
+            <h2 className="headline-2 section-title" data-aos="fade-left">
+             
               Wir sind stolz darauf, Gastgeber zu sein.
             </h2>
           
-            <motion.p
-            
-             variants={pVariants}
-             initial="hidden"
-             whileInView="visible" 
-              className="section-text"  > {parg.split("").map((char,index)=>
-              <motion.span key={index} variants={spanVariants}>{char}</motion.span>
-              )}</motion.p>
-      
+     
+      <p className="section-text" data-aos="fade-up">Seit dem 1. Juli 2019 wird unser Restaurant von erfahrenen Gastgebern geleitet, die in der Gastronomie langjährige Erfahrung mitbringen. Wir laden Sie herzlich ein, unser neues kulinarisches Angebot und unsere Gastfreundschaft zu erleben. Wir freuen uns auf Ihren Besuch.</p>
             <div className="contact-label"></div>
           </div>
-          <figure className="about-banner ">
+          <figure className="about-banner  " data-aos="flip-right">
             <Image
               src={abt}
               alt=" Logo"
@@ -64,13 +56,8 @@ const parg=" Seit dem 1. Juli 2019 wird unser Restaurant von erfahrenen Gastgebe
               data-parallax-item=""
               data-parallax-speed="1.75"
             >
-              <div className="service-card">
-                <motion.div
-                 initial="hidden"
-                 whileInView="visible" 
-                variants={rotVariants}
-                className="has-before hover:shine">
-             
+              <div className="service-card" data-aos="flip-left">
+       
                     <Image
                       src={abt2}
                       width={285}
@@ -80,7 +67,7 @@ const parg=" Seit dem 1. Juli 2019 wird unser Restaurant von erfahrenen Gastgebe
                       className="w-100 "
                     />
                 
-                </motion.div>
+              
               </div>
             </div>
           </figure>

@@ -9,7 +9,8 @@ export default function AddMenu() {
   const UPLOAD_PRESET= 'roterstein';
   const CLOUD_KEY= '456821689281721'
   const [title, setTitle] = useState("");
-
+  const [mnpdf, setmnpdf] = useState("")
+  const [fileType, setFileType] = useState("");
   const [photo, setPhoto] = useState("");
   const router = useRouter();
 const {data: session, status} = useSession()
@@ -24,8 +25,8 @@ if(status === 'unauthenticated'){
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!title || !photo) {
-      alert("title and image are requierd ");
+    if (!title || !photo || !mnpdf) {
+      alert("title image and PDF are requierd ");
       return;
     }
     try {
@@ -37,7 +38,7 @@ if(status === 'unauthenticated'){
           "Content-Type": "application/json",
          
         },
-        body: JSON.stringify({ title , imageUrl }),
+        body: JSON.stringify({ title , imageUrl ,menuPdf }),
       });
       if (res.ok) {
         router.refresh();
@@ -49,25 +50,52 @@ if(status === 'unauthenticated'){
       console.log(error);
     }
   };
-  const uploadImage = async()=> {
-    if(!photo) return
-    const formData = new FormData()
-    formData.append('file' , photo)
-    formData.append('upload_preset', UPLOAD_PRESET)
+  const uploadImage = async () => {
+    if (!photo) return;
+    const formData = new FormData();
+    formData.append('file', photo);
+    formData.append('upload_preset', UPLOAD_PRESET);
     formData.append("api_key", CLOUD_KEY);
+    const resourceType = photo.type === 'application/pdf' ? 'raw' : 'image';
+
+    // Set the fileType state variable
+    setFileType(photo.type);
+
     try {
-      const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, {
-        method:'POST',
-        body:formData
-      })
-      const data = await res.json()
-      
-      const imageUrl = data['secure_url']
-      return imageUrl
+      const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/${resourceType}/upload`, {
+        method: 'POST',
+        body: formData
+      });
+      const data = await res.json();
+      const fileUrl = data['secure_url'];
+      return fileUrl;
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
+  const uploadPdf = async () => {
+    if (!mnpdf) return;
+    const formData = new FormData();
+    formData.append('file', mnpdf);
+    formData.append('upload_preset', UPLOAD_PRESET);
+    formData.append("api_key", CLOUD_KEY);
+    const resourceType = mnpdf.type === 'application/pdf' ? 'raw' : 'image';
+
+    // Set the fileType state variable
+    setFileType(mnpdf.type);
+
+    try {
+      const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/${resourceType}/upload`, {
+        method: 'POST',
+        body: formData
+      });
+      const data = await res.json();
+      const fileUrl = data['secure_url'];
+      return fileUrl;
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div>
       <div>
@@ -93,7 +121,9 @@ if(status === 'unauthenticated'){
                   />
                  
                   <label htmlFor="image">Upload image</label>
-                  <input   className="border border-slate-500 px-8 py-2 "  type="file" id="image"   onChange={(e) => setPhoto(e.target.files[0])} />
+                  <input type="file" accept=".pdf, .jpg, .jpeg, .png" id="file" onChange={(e) => setPhoto(e.target.files[0])} />
+                  <label htmlFor="pdff">Upload PDF</label>
+                  <input type="file" accept=".pdf, .jpg, .jpeg, .png" id="file" onChange={(e) => setmnpdf(e.target.files[0])} />
                   <center>
                     <button
                       type="submit"

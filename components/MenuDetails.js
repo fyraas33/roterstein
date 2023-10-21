@@ -7,7 +7,7 @@ import React from "react";
 import "../assest/css/menu.css";
 
 
-
+import { PDFDocument } from 'pdf-lib';
 
 
 
@@ -33,7 +33,7 @@ export default async function MenuDetails({id , title }) {
 
   const {menu} = await getMenu(id);
 
- 
+
 
   
   return (
@@ -42,22 +42,17 @@ export default async function MenuDetails({id , title }) {
 
 
 
-<h1>{menu.title}</h1>
+
 
    
 
        
-     <Image
-                    src={menu.imageUrl}
-                    className="img-cover"
-                    width={100}
-                    height={100}
-                    priority
-                    alt=" MAIN MENU"
-                 
-                  />
-         
-          
+
+        <object width="100%" height="1000px" data={menu.menuPdf}></object> 
+      
+    
+     
+
          
     </div>
   );

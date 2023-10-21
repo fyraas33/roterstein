@@ -9,6 +9,9 @@ import rt4 from "./img/rt4.jpg"
 import rt5 from "./img/rt5.jpg"
 import rt6 from "./img/rt6.jpg"
 import Image from "next/image";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 function Slider() {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -48,27 +51,44 @@ function Slider() {
     });
   }, [activeSlide]);
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
+
   return (
     <div className="sliderr">
       <section className="container">
        
-        <div className={`slide ${activeSlide === 0 ? "active" : ""}`}>
-          <Image src={rt1} alt="" width={"auto"} height={"auto"} />
+        <div className={`slide ${activeSlide === 0 ? "active" : ""}`} 
+     >
+          <Image src={rt1} alt="" width={"auto"} height={"auto"} data-aos="fade-right"
+     data-aos-offset="100" />
         </div>
-        <div className={`slide ${activeSlide === 1 ? "active" : ""}`}>
-        <Image src={rt2} alt="" width={"auto"} height={"auto"} />
+        <div className={`slide ${activeSlide === 1 ? "active" : ""}`} 
+   >
+        <Image src={rt2} alt="" width={"auto"} height={"auto"} data-aos="fade-right"
+     data-aos-offset="150" />
         </div>
-        <div className={`slide ${activeSlide === 2 ? "active" : ""}`}>
-        <Image src={rt3} alt="" width={"auto"} height={"auto"} />
+        <div className={`slide ${activeSlide === 2 ? "active" : ""}`} 
+     >
+        <Image src={rt3} alt="" width={"auto"} height={"auto"} data-aos="fade-right"
+     data-aos-offset="200" />
         </div>
-        <div className={`slide ${activeSlide === 3 ? "active" : ""}`}>
-        <Image src={rt4} alt="" width={"auto"} height={"auto"} />
+        <div className={`slide ${activeSlide === 3 ? "active" : ""}`} 
+   >
+        <Image src={rt4} alt="" width={"auto"} height={"auto"}  data-aos="fade-right"
+     data-aos-offset="250"/>
         </div>
-        <div className={`slide ${activeSlide === 4 ? "active" : ""}`}>
-        <Image src={rt5} alt="" width={"auto"} height={"auto"} />
+        <div className={`slide ${activeSlide === 4 ? "active" : ""}`} 
+   >
+        <Image src={rt5} alt="" width={"auto"} height={"auto"}  data-aos="fade-right"
+     data-aos-offset="300"/>
         </div>
-        <div className={`slide ${activeSlide === 5 ? "active" : ""}`}>
-        <Image src={rt6} alt="" width={"auto"} height={"auto"} />
+        <div className={`slide ${activeSlide === 5 ? "active" : ""}`} 
+    >
+        <Image src={rt6} alt="" width={"auto"} height={"auto"} data-aos="fade-right"
+     data-aos-offset="350" />
         </div>
         
       </section>

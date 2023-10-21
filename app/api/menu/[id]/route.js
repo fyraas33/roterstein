@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 export async function PUT(req , {params}) {
 
     const {id} = params;
-    const {newTitle: title  , imageUrl: imageUrl} = await req.json();
+    const {newTitle: title  , imageUrl: imageUrl , menuPdf:menuPdf} = await req.json();
     await dbConnect();
-    await Menu.findByIdAndUpdate(id, {title, imageUrl})
+    await Menu.findByIdAndUpdate(id, {title, imageUrl , menuPdf})
     return NextResponse.json({message: "menu updated"}, {status: 200});
 }
 

@@ -137,7 +137,7 @@ function Hero() {
             />
       </div>
       <p className="label-2 section-subtitle slider-reveal ownr">
-       lorem &amp; lorem
+       Roter Stein
       </p>
       <h1 className="display-1 hero-title slider-reveal prgrphha">
       Entdecken Sie unsere kulinarische Vielfalt – <br />
@@ -165,7 +165,7 @@ function Hero() {
             />
       </div>
       <p className="label-2 section-subtitle slider-reveal ownr">
-      Lorem ipsum 
+      Roter Stein
       </p>
       <h1 className="display-1 hero-title slider-reveal prgrphha">
       Genießen Sie exquisite Gerichte <br />
@@ -193,15 +193,13 @@ function Hero() {
             />
       </div>
       <p className="label-2 section-subtitle slider-reveal ownr">
-       lorem &amp; lorem
+      Roter Stein
       </p>
       <h1 className="display-1 hero-title slider-reveal prgrphha">
       Lorem ipsum dolor sit <br />
       Lorem ipsum 
       </h1>
-      <p className="body-2 hero-text slider-reveal prgrphha">
-      Lorem ipsum dolor sit &amp; Lorem ipsum dolor sit
-      </p>
+   
       <a href="#menu" className="btn btn-primary slider-reveal">
         <span className="text text-1 ownr">View Our Menu</span>
         <span className="text text-2 " aria-hidden="true">

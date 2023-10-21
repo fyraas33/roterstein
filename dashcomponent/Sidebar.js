@@ -64,14 +64,7 @@ function Sidebaar() {
         </label>
         <div className="header-menu">
 
-          <div className="notify-icon">
-            <span className="las la-envelope" />
-            <span className="notify">4</span>
-          </div>
-          <div className="notify-icon">
-            <span className="las la-bell" />
-            <span className="notify">3</span>
-          </div>
+   
           <div className="user">
             <div
               className="bg-img"

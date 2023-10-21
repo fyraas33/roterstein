@@ -1,12 +1,47 @@
 "use client"
 
 
+import React, { useState, useEffect } from 'react';
 
-import React from 'react'
 import "../assest/css/dash.css"
 import Link from 'next/link'
 
 function Dash() {
+  const [reservationCount, setReservationCount] = useState(0);
+
+
+  useEffect(() => {
+    // Fetch reservation count from your API route
+    fetch('/api/reserve', { method: 'GET' })
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.reserve) {
+          setReservationCount(data.reserve.length);
+        }
+      })
+      .catch(error => console.error('Error fetching reservation count:', error));
+  }, []);
+
+  const maxReservationCount = 10; // Set this to your actual maximum reservation count
+  const percentage = (reservationCount / maxReservationCount) * 100;
+
+  // Determine the indicator color based on the percentage
+  let backgroundColor;
+  if (percentage <= 25) {
+    backgroundColor = 'green';
+  } else if (percentage <= 50) {
+    backgroundColor = 'orange';
+  } else if (percentage <= 75) {
+    backgroundColor = 'orangered';
+  } else {
+    backgroundColor = 'red';
+  }
+
+  // Style object for the background color
+  const indicatorStyle = {
+    width: `${percentage}%`,
+    backgroundColor: backgroundColor,
+  };
 
   return (
     <div>
@@ -39,15 +74,15 @@ function Dash() {
           <Link href="/dashboard/reservation" >
           <div className="card">
             <div className="card-head">
-              <h2>10</h2>
+            {reservationCount}
               <span className="las la-envelope" />
             </div>
             <div className="card-progress">
               <small>New Reservation received</small>
               <div className="card-indicator">
-                <div className="indicator four" style={{ width: "90%" }} />
-              </div>
-            </div>
+              <div className="indicator four" style={indicatorStyle} />
+          </div>
+        </div>
           </div></Link>
         </div>
        

@@ -1,5 +1,4 @@
 
-import './globals.css'
 
 import Navbar from "../components/navbar"
 import Hero from "../components/hero"
@@ -12,6 +11,7 @@ import Footer from "../components/Footer"
 import Gallery from "../components/Gallery"
 
 
+
 export default function Home() {
   
   return (
@@ -20,7 +20,7 @@ export default function Home() {
   <div className='mobnav'> <Navbar />  </div>
     <div className='dskt'><Mbnav/></div>
       <Hero/>
-  
+ 
        <About/>
        <Menu/>
       <Reserve/>

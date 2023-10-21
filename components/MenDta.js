@@ -52,9 +52,7 @@ export default async function MenDta() {
 
 
 
-       <motion.ul className="grid-list "   variants={contVariants}
-             initial="hidden"
-             whileInView="visible" >
+       <ul className="grid-list "   >
       {menu.map(m =>(      <motion.li
       key={m._id}
              variants={itemVariants}
@@ -92,7 +90,7 @@ export default async function MenDta() {
 
          
           
-          </motion.ul>    
+          </ul>    
     </div>
   );
 }
