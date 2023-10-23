@@ -195,7 +195,7 @@ body.loaded {
   overflow: overlay;
 }
 
-body { overflow-x:hidden !important; }
+
 body.nav-active {
   overflow: hidden;
 }
@@ -2321,6 +2321,9 @@ textarea.input-field {
   .dskt {
     display: none !important;
   }
+}
+@media (max-width: 650px){
+  body ,html { overflow-x:hidden !important; }
 }
 
 .dskt {
