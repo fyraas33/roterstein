@@ -2322,11 +2322,7 @@ textarea.input-field {
     display: none !important;
   }
 }
-@media (max-width: 650px){
-  body ,html {
-    max-width: 100%;
-    overflow-x:hidden ; }
-}
+
 
 .dskt {
   background-color: var(--eerie-black-4) !important;
