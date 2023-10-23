@@ -2323,7 +2323,9 @@ textarea.input-field {
   }
 }
 @media (max-width: 650px){
-  body ,html { overflow-x:hidden !important; }
+  body ,html {
+    max-width: 100%;
+    overflow-x:hidden ; }
 }
 
 .dskt {
