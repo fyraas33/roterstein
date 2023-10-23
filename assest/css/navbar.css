@@ -195,6 +195,7 @@ body.loaded {
   overflow: overlay;
 }
 
+body { overflow-x:hidden !important; }
 body.nav-active {
   overflow: hidden;
 }
