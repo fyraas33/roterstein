@@ -10,7 +10,7 @@ import Footer from "../components/Footer"
 
 import Gallery from "../components/Gallery"
 
-
+import Cookiesbn from "../components/Cookiesbn"
 
 export default function Home() {
   
@@ -25,6 +25,7 @@ export default function Home() {
        <Menu/>
       <Reserve/>
     <Gallery/>
+    <Cookiesbn/>
     <Footer/>
      
     </main>
