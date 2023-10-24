@@ -1,12 +1,12 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { hasCookie, setCookie } from 'cookies-next'
 
 export default function Cookiesbn (){
 
-const [showConsent, setShowConsent] = React.useState(true);
-React.useEffect(() =>
+const [showConsent, setShowConsent] = useState(true);
+useEffect(() =>
 {
     setShowConsent( hasCookie("localConsent"));
 },[]);
