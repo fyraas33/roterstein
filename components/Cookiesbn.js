@@ -14,7 +14,7 @@ React.useEffect(() =>
 const acceptCookie = () =>
 {
     setShowConsent(true);
-    setCookie('localConsent', "true", { expires: 365 }) 
+    setCookie('localConsent', "true",  365 ) 
 }
 if(showConsent)
 {
