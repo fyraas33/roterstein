@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { hasCookie, setCookie } from 'cookies-next'
-import Link from 'next/link'
+
 export default function Cookiesbn (){
 
 const [showConsent, setShowConsent] = React.useState(true);
@@ -14,13 +14,14 @@ React.useEffect(() =>
 const acceptCookie = () =>
 {
     setShowConsent(true);
-    setCookie('localConsent', "true", {}) 
+    setCookie('localConsent', "true", { expires: 365 }) 
 }
 if(showConsent)
 {
     return null;
 }
 return(
+
 
 
 <div id="cookie-bar">
