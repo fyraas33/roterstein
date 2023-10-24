@@ -2326,6 +2326,9 @@ textarea.input-field {
   section{
     max-width: 100%;
     overflow-x:hidden ; }
+    .reservation{
+      z-index: 9999;
+    }
 }
 
 .dskt {
