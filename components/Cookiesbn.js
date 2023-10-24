@@ -23,31 +23,21 @@ if(showConsent)
 return(
 
 
-
-    <div className="cookie-consent-banner">
-  <div className="cookie-consent-banner__inner">
-    <div className="cookie-consent-banner__copy">
-      <div className="cookie-consent-banner__header">
-        THIS WEBSITE USES COOKIES
-      </div>
-      <div className="cookie-consent-banner__description">
-      We use cookies to ensure you get the best experience on our website. By using our site, you agree to our cookie policy.
-      </div>
-    </div>
-    <div className="cookie-consent-banner__actions">
-    
+<div id="cookie-bar">
+  <div id="contentcookie">
+    <p>
+      We use cookies to ensure you get the best experience on our website. By
+      using our site, you agree to our cookie policy.
+    </p>
     <button  className="btn btn-secondary" onClick={()=> acceptCookie()} >
         <span className="text text-1">Accept</span>
         <span className="text text-2" aria-hidden="true">
         Accept
         </span>
       </button>
-     
-  
-    </div>
+    <div className="clear" />
   </div>
 </div>
-
 
 )
 }

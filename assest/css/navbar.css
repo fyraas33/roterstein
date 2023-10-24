@@ -2339,6 +2339,38 @@ textarea.input-field {
 
 
 
+#cookie-bar{
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  display:block;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+  color: #fff;
+  width: 100%;
+  z-index: 9999999;
+}
+#cookie-bar p{width: 85%;float: left;display: inline-block;font-size: 15px;line-height: 24px;color: red;}
+#cookie-bar button{float: right;background: transparent;border: 1px solid red;color: red;padding: 15px 20px;text-transform: uppercase;font-size: 16px;margin-top: 5px; border-radius: 4px;}
+#cookie-bar a{color: red;}
+#contentcookie{ padding:20px 50px; width: 80%; margin: auto; }
+
+.clear{ clear:both; }
+        
+
+  @media(max-width: 767px){
+
+#cookie-bar p{width: 100%;font-size: 14px;}
+#cookie-bar button{width: 100%;}
+#cookie-bar a{color: red;}
+#contentcookie{padding: 20px 0px;width: 90%;margin: auto;}
+  }
 
 
+
+main {
+  max-width: 100%  ;
+  overflow-x: hidden ;
+}
 
