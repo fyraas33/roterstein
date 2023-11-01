@@ -85,8 +85,8 @@ const generateOptions = () => {
         <h2 className="headline-1 text-center">Online Reservation</h2>
         <p className="form-text text-center">
         Buchungsanfrage
-          <a href="tel:043 541 82 62" className="link">
-          043 541 82 62  
+                     <a href="tel:043 541 82 62" className="link">
+                     &nbsp; 043 541 82 62   &nbsp;
           </a>
           oder füllen Sie das Reservierungsformular aus.
         </p>
@@ -180,12 +180,15 @@ const generateOptions = () => {
           className="input-field"
          
         />
-       <motion.button 
+      <motion.button 
   type="submit" 
-  className={`mail-btn ${isFlying ? 'fly' : ''}`} 
+  className={`btn btn-secondary${isFlying ? 'fly' : ''}`} 
   whileTap={{scale:0.5}}
 >
+         <span className="text text-1">{buttonText}</span>
+        <span className="text text-2" aria-hidden="true">
         {buttonText}
+        </span>
         </motion.button>
        
         {error &&

@@ -5,7 +5,7 @@
 
 :root {
     --main-color: #DD3333;
-    --color-dark: #34425A;
+    --color-dark: #000;
     --text-grey: #B0B0B0;
 }
 
@@ -107,9 +107,7 @@
     font-weight: 600;
 }
 
-.sidebar {
-    /*overflow-y: auto;*/
-}
+
 
 .side-menu ul {
     text-align: center;
@@ -126,7 +124,10 @@
     color: #fff;
 }
 .side-menu a:hover {
-    background: #2B384E;
+    background: #3c3c3c;
+}
+.side-menu a:focus {
+    background: #3c3c3c;
 }
 .side-menu a span {
     display: block;
@@ -425,7 +426,7 @@ table tbody td {
 
 table tbody td:first-child {
     padding-left: 1rem;
-    color: var(--main-color);
+
     font-weight: 600;
     font-size: .9rem;
 }
@@ -460,8 +461,12 @@ table tbody tr {
     font-size: 1.5rem;
     margin-right: .5rem;
 }
-
-
+.la-edit:hover{
+    color: #11a8c3 !important;
+}
+.actions span:hover{
+    color: red;
+}
 
 @media only screen and (max-width: 1200px) {
     .analytics {

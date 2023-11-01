@@ -4,7 +4,7 @@
 import React, { useEffect , useState } from 'react';
 import logo from "../assest/img/logo.png"
 import Image from 'next/image'
-import "../assest/css/navbar.css"
+
 import { Icon } from '@iconify/react';
 import { useSession } from 'next-auth/react';
 import Link from "next/link"

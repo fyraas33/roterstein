@@ -146,10 +146,10 @@ function Hero() {
       <p className="body-2 hero-text slider-reveal prgrphha">
     
       </p>
-      <a href="#menu" className="btn btn-primary slider-reveal">
-        <span className="text text-1 ownr">View Our Menu</span>
+      <a href="#menu"   className="btn btn-secondary slider-reveal"  >
+        <span className="text text-1"> View Our Menu</span>
         <span className="text text-2" aria-hidden="true">
-          View Our Menu
+        View Our Menu
         </span>
       </a>
     </li>
@@ -161,6 +161,7 @@ function Hero() {
               className="img-cover"
               width={1880}
               height={950}
+              
               priority
             />
       </div>
@@ -174,10 +175,10 @@ function Hero() {
       <p className="body-2 hero-text slider-reveal prgrphha">
     
       </p>
-      <a href="#menu" className="btn btn-primary slider-reveal">
-        <span className="text text-1 ownr">View Our Menu</span>
-        <span className="text text-2 " aria-hidden="true">
-          View Our Menu
+      <a href="#menu"   className="btn btn-secondary slider-reveal"  >
+        <span className="text text-1"> View Our Menu</span>
+        <span className="text text-2" aria-hidden="true">
+        View Our Menu
         </span>
       </a>
     </li>
@@ -200,10 +201,10 @@ function Hero() {
       Lorem ipsum 
       </h1>
    
-      <a href="#menu" className="btn btn-primary slider-reveal">
-        <span className="text text-1 ownr">View Our Menu</span>
-        <span className="text text-2 " aria-hidden="true">
-          View Our Menu
+      <a href="#menu"   className="btn btn-secondary slider-reveal"  >
+        <span className="text text-1"> View Our Menu</span>
+        <span className="text text-2" aria-hidden="true">
+        View Our Menu
         </span>
       </a>
     </li>

@@ -133,3 +133,110 @@ margin-right: 35% !important;
 .frtdwn{
   font-size: 1.5rem;
 }
+
+
+
+.fotter ul {
+
+  margin:0;
+  padding:0;
+  display:flex;
+}
+.fotter ul li {
+  list-style:none;
+}
+.fotter ul li a {
+  display:block;
+  position:relative;
+  width:60px;
+  height:40px;
+  line-height:40px;
+  font-size:30px;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  margin: 0 10px;
+  transition:.5s;
+}
+.fotter ul li a span {
+  position:absolute;
+  transition: transform .5s;
+}
+.fotter ul li a span:nth-child(1),
+.fotter ul li a span:nth-child(3){
+  width:100%;
+  height:3px;
+  background:#fff;
+}
+.fotter ul li a span:nth-child(1) {
+  top:0;
+  left:0;
+  transform-origin: right;
+}
+.fotter ul li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:transform .5s;
+}
+
+.fotter ul li a span:nth-child(3) {
+  bottom:0;
+  left:0;
+  transform-origin: left;
+}
+.fotter ul li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition:transform .5s;
+}
+
+.fotter ul li a span:nth-child(2),
+.fotter ul li a span:nth-child(4){
+  width:3px;
+  height:100%;
+  background:#404040;
+}
+.fotter ul li a span:nth-child(2) {
+  top:0;
+  left:0;
+  transform:scale(0);
+  transform-origin: bottom;
+}
+.fotter ul li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition:transform .5s;
+}
+.fotter ul li a span:nth-child(4) {
+  top:0;
+  right:0;
+  transform:scale(0);
+  transform-origin: top;
+}
+.fotter ul li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition:transform .5s;
+}
+
+.fotter .facebook:hover {
+  color: #3b5998;
+}
+.fotter .facebook:hover span { 
+  background: #3b5998;
+}
+
+.fotter .instagram:hover {
+  color: #c32aa3;
+}
+.fotter .instagram:hover span { 
+  background: #c32aa3;
+}
+
+
+.fotter ul li a:hover:nth-child(3) {
+  color: #c32aa3;
+}
+.fotter ul li a:hover:nth-child(4) {
+  color: #dd4b39;
+}

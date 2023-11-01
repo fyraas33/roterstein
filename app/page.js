@@ -7,7 +7,7 @@ import Mbnav from "../components/Mbnav"
 import Reserve from "../components/Reserve"
 import Menu from "../components/Menu"
 import Footer from "../components/Footer"
-
+import "../assest/css/navbar.css"
 import Gallery from "../components/Gallery"
 
 import Cookiesbn from "../components/Cookiesbn"

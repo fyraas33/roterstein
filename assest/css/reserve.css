@@ -24,5 +24,27 @@
 }
 
 .prgrphha{
-    text-shadow: 1px 1px #000;
+    text-shadow: 2px 2px #000;
+   
 }
+
+
+@media (min-width: 1250px){
+.tmpar{
+    font-size: 2.5rem;
+
+}
+}
+
+
+.table-approved {
+    background-color: green;
+  }
+  
+  .table-rejected {
+    background-color: red;
+  }
+  
+  .table-pending {
+    background-color: orange;
+  }

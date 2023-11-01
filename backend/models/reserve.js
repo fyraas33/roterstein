@@ -40,6 +40,11 @@ const reserveSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  status: {
+    type: String,
+    enum: ["Pending", "approved", "rejected"],
+    default: "Pending",
+  },
 });
 
 const Reserve =

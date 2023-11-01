@@ -1,7 +1,18 @@
 import Link from 'next/link'
 import React from 'react'
 import Rsvrmvbtn from "./Rsvrmvbtn"
+import StatusChangeButton from "./StatusChangeButton"
 
+
+import "../assest/css/reserve.css"
+
+
+
+function formatDateWithGermanDay(dateString) {
+  const options = { weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit' };
+  const date = new Date(dateString);
+  return date.toLocaleDateString('de-DE', options);
+}
 
 
 
@@ -27,6 +38,8 @@ const getReserve = async () => {
 export default async function Rservation() {
 
   const data = await getReserve();
+
+
   
   if (!data || !data.reserve) {
     // Handle the case where data or data.reserve is undefined
@@ -35,6 +48,7 @@ export default async function Rservation() {
   }
 
   const { reserve } = data;
+ 
 
   return (
     <div>
@@ -57,7 +71,7 @@ export default async function Rservation() {
    <div className="records table-responsive">
     
      <div>
-       <table className='table-fixed' width={"100%"}>
+       <table className="table-fixed" width={"100%"}>
        <thead>
            <tr>
            
@@ -83,11 +97,16 @@ export default async function Rservation() {
              <th>
                <span  />Remark
              </th>
+             <th>
+               <span  />Status
+             </th>
             
            </tr>
          </thead>
-         {reserve.map(r =>(
-         <tbody key={r._id}>
+       {reserve.map(r =>(
+         <tbody  key={r._id}>
+
+            
            <tr >
           
              <td>
@@ -98,11 +117,13 @@ export default async function Rservation() {
              </td>
              <td>{r.email}</td>
              <td>{r.phone}</td>
-             <td>{r.day}</td>
+           <td>{formatDateWithGermanDay(r.day)}</td> 
              <td>{r.time}</td>
              <td>{r.person}</td>
              <td>{r.message}</td>
+             <td  >   <StatusChangeButton id={r._id} email={r.email} status={r.status}/></td>
              <td>
+              
                <div className="actions">
                  <Rsvrmvbtn id={r._id} />
              
@@ -110,9 +131,9 @@ export default async function Rservation() {
                </div>
              </td>
            </tr>
-         
+          
          </tbody>
-         ))}
+        ))}
        </table>
      </div>
    </div>

@@ -77,7 +77,7 @@ class Opnhrs extends Component {
   
       return (
         <div>
-        <p>{`Es ist ${today} ${hour}:${minutes} ${suffix} - Wir haben ${status}!`}</p>  
+        <p className="tmpar">{`Es ist ${today} ${hour}:${minutes} ${suffix} - Wir haben ${status}!`}</p>  
         </div>
       );
     }

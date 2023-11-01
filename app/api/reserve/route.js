@@ -46,3 +46,24 @@ await Reserve.findByIdAndDelete(id);
 return NextResponse.json({message: "reservation deleted"}, {status:200})
 
 }
+
+
+
+export async function PUT(req) {
+  const id = req.nextUrl.searchParams.get("id");
+  const { status } = await req.json();
+  
+  try {
+    await dbConnect();
+    const reservation = await Reserve.findById(id);
+    if (!reservation) {
+      return NextResponse.json({ message: "Reservation not found" }, { status: 404 });
+    }
+    reservation.status = status;
+    await reservation.save();
+    return NextResponse.json({ message: "Reservation status updated" }, { status: 200 });
+  } catch (error) {
+    console.error("Error updating reservation status:", error);
+    return NextResponse.json({ message: "Error updating reservation status" }, { status: 500 });
+  }
+}

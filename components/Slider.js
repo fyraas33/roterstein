@@ -2,12 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import "../assest/css/slider.css";
-import rt1 from "./img/rt1.jpg"
-import rt2 from "./img/rt2.jpg"
-import rt3 from "./img/rt3.jpg"
-import rt4 from "./img/rt4.jpg"
-import rt5 from "./img/rt5.jpg"
-import rt6 from "./img/rt6.jpg"
+import rt1 from "./img/rt1.jpg";
+import rt2 from "./img/rt2.jpg";
+import rt3 from "./img/rt3.jpg";
+import rt4 from "./img/rt4.jpg";
+import rt5 from "./img/rt5.jpg";
+import rt6 from "./img/rt6.jpg";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -55,42 +55,75 @@ function Slider() {
     Aos.init();
   }, []);
 
-
   return (
     <div className="sliderr">
       <section className="container">
-       
-        <div className={`slide ${activeSlide === 0 ? "active" : ""}`} 
-     >
-          <Image src={rt1} alt="" width={"auto"} height={"auto"} data-aos="fade-right"
-     data-aos-offset="100" />
+        <div className={`slide ${activeSlide === 0 ? "active" : ""}`}>
+          <Image
+            src={rt1}
+            alt=""
+            width={"auto"}
+            height={"auto"}
+            data-aos="fade-right"
+            data-aos-offset="100"
+            loading="lazy"
+          />
         </div>
-        <div className={`slide ${activeSlide === 1 ? "active" : ""}`} 
-   >
-        <Image src={rt2} alt="" width={"auto"} height={"auto"} data-aos="fade-right"
-     data-aos-offset="150" />
+        <div className={`slide ${activeSlide === 1 ? "active" : ""}`}>
+          <Image
+            src={rt2}
+            alt=""
+            width={"auto"}
+            height={"auto"}
+            data-aos="fade-right"
+            data-aos-offset="150"
+            loading="lazy"
+          />
         </div>
-        <div className={`slide ${activeSlide === 2 ? "active" : ""}`} 
-     >
-        <Image src={rt3} alt="" width={"auto"} height={"auto"} data-aos="fade-right"
-     data-aos-offset="200" />
+        <div className={`slide ${activeSlide === 2 ? "active" : ""}`}>
+          <Image
+            src={rt3}
+            alt=""
+            width={"auto"}
+            height={"auto"}
+            data-aos="fade-right"
+            data-aos-offset="200"
+            loading="lazy"
+          />
         </div>
-        <div className={`slide ${activeSlide === 3 ? "active" : ""}`} 
-   >
-        <Image src={rt4} alt="" width={"auto"} height={"auto"}  data-aos="fade-right"
-     data-aos-offset="250"/>
+        <div className={`slide ${activeSlide === 3 ? "active" : ""}`}>
+          <Image
+            src={rt4}
+            alt=""
+            width={"auto"}
+            height={"auto"}
+            data-aos="fade-right"
+            data-aos-offset="250"
+            loading="lazy"
+          />
         </div>
-        <div className={`slide ${activeSlide === 4 ? "active" : ""}`} 
-   >
-        <Image src={rt5} alt="" width={"auto"} height={"auto"}  data-aos="fade-right"
-     data-aos-offset="300"/>
+        <div className={`slide ${activeSlide === 4 ? "active" : ""}`}>
+          <Image
+            src={rt5}
+            alt=""
+            width={"auto"}
+            height={"auto"}
+            data-aos="fade-right "
+            data-aos-offset="300"
+            loading="lazy"
+          />
         </div>
-        <div className={`slide ${activeSlide === 5 ? "active" : ""}`} 
-    >
-        <Image src={rt6} alt="" width={"auto"} height={"auto"} data-aos="fade-right"
-     data-aos-offset="350" />
+        <div className={`slide ${activeSlide === 5 ? "active" : ""}`}>
+          <Image
+            src={rt6}
+            alt=""
+            width={"auto"}
+            height={"auto"}
+            data-aos="fade-right"
+            data-aos-offset="350"
+            loading="lazy"
+          />
         </div>
-        
       </section>
     </div>
   );

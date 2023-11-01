@@ -40,22 +40,22 @@ export default function Swwpr() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <Image src={rt1} alt="" width={"auto"} height={"auto"} />
+          <Image src={rt1} alt="" width={"auto"} height={"auto"} loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-        <Image src={rt2} alt="" width={"auto"} height={"auto"} />
+        <Image src={rt2} alt="" width={"auto"} height={"auto"} loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-        <Image src={rt3} alt="" width={"auto"} height={"auto"} />
+        <Image src={rt3} alt="" width={"auto"} height={"auto"} loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-        <Image src={rt4} alt="" width={"auto"} height={"auto"} />
+        <Image src={rt4} alt="" width={"auto"} height={"auto"} loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-        <Image src={rt5} alt="" width={"auto"} height={"auto"} />
+        <Image src={rt5} alt="" width={"auto"} height={"auto"} loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-        <Image src={rt6} alt="" width={"auto"} height={"auto"} />
+        <Image src={rt6} alt="" width={"auto"} height={"auto"} loading="lazy" />
         </SwiperSlide>
        
       </Swiper>

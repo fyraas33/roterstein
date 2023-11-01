@@ -46,7 +46,8 @@ function About() {
               className="w-100 "
               width={570}
               height={570}
-              priority
+              loading="lazy"
+              placeholder="blur"
               data-parallax-item=""
               data-parallax-speed={1}
             />
@@ -64,6 +65,7 @@ function About() {
                       height={285}
                       loading="lazy"
                       alt=""
+                      placeholder="blur"
                       className="w-100 "
                     />
                 
@@ -78,6 +80,7 @@ function About() {
             height={194}
             loading="lazy"
             alt=""
+            placeholder="blur"
             className="shape"
           />
         </div>

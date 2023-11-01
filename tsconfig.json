@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.js", "dashcomponent/Sidebar.js", "app/dashboard/layout.js", "components/MyPdfViewer.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.js", "dashcomponent/Sidebar.js", "app/dashboard/layout.js", "components/MyPdfViewer.js", "app/layout.tsx"],
   "exclude": ["node_modules"]
 }

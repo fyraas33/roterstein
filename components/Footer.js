@@ -1,30 +1,51 @@
-import React from "react";
+
+
+
 import gglog from "../assest/img/ggl.png";
 import logo from "../assest/img/logoblk.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function Footer() {
   return (
     <div className="fotter">
-      <link
-        rel="stylesheet"
-        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
-      ></link>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
       <footer className="bg-neutral-100  text-center text-neutral-600 dark:6 lg:text-left">
-        <div className="flex content-center bg-red-700 justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-center">
-          <div className=" mr-12 text-white lg:block ">
-            <h1 className="text-5xl">Folge uns auf</h1>
-          </div>{" "}
-          <a href="https://www.facebook.com/" target="blank">
-            <i className="lab la-facebook-square  flex text-6xl mr-12 text-white justify-center "></i>
-          </a>
-          <a href="https://www.instagram.com/" target="blank">
-            <i className="lab la-instagram flex text-6xl mr-12 text-white justify-center"></i>
-          </a>
+        <div className="flex  content-center bg-red-700 justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-center">
+          <div className=" mr-12 text-white lg:block  ">
+            <h1 className="text-5xl mt-2">Folge uns auf</h1>
+          </div>
+          
+          <div className="ftricon">
+            <ul className="ftrul">
+    <li >
+      <a className="facebook" href="#">
+        <span />
+        <span />
+        <span />
+        <span />
+        <i className="fa fa-facebook" aria-hidden="true" />
+      </a>
+    </li>
+  
+    <li>
+      <a className="instagram" href="#">
+        <span />
+        <span />
+        <span />
+        <span />
+        <i className="fa fa-instagram" aria-hidden="true" />
+      </a>
+    </li>
+   
+  </ul>
+          </div>
+
+          
         </div>
        
-        <div className=" content-center cntttnt justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-center">
+        <div className=" content-center cntttnt justify-center border-b-2 border-neutral-200 p-20 dark:border-neutral-500 lg:justify-center">
           <div className="grid-1 grid gap-8 md:grid-cols-5 lg:flex space-x-4  ftrabts">
           
 
@@ -35,7 +56,8 @@ function Footer() {
                 className=""
                 width={350}
                 height={50}
-                priority
+                loading="lazy"
+                placeholder="blur"
               />
             
             </div>
@@ -105,11 +127,12 @@ function Footer() {
    <div className="ggllog ">
               <Image
                 src={gglog}
+                placeholder="blur"
                 alt=" Logo"
                 className=""
                 width={150}
                 height={50}
-                priority
+                loading="lazy"
               />
             
             </div>
@@ -123,23 +146,23 @@ function Footer() {
         {/*Copyright section*/}
         <div className="bg-black p-6 lg:flex justify-between  frtdwn  dark:bg-black">
           <a
-            className="font-semibold text-white ml-8"
+            className="font-semibold text-white ml-8 hover:text-red-600"
             href="https://oaase.netlify.app//"
             target="blank"
           >
             2023 © Restaurant Roter Stein - Alle Rechte Vorbehalten - Designed By OAASE
           </a>
    <div className="flex">
-            <a
-              className="font-semibold text-white "
-              href="https://oaase.netlify.app//"
-              target="blank"
-            >
-            Impressum 
-            </a>
+      
+             <a href="impressum"   className="font-semibold text-white hover:text-red-600  ">
+               Impressum 
+                  </a> 
+        
+          
+        
             <p className="font-semibold text-white mx-6">|</p>
             <a
-              className="font-semibold text-white mr-8"
+              className="font-semibold text-white mr-8 hover:text-red-600"
               href="https://oaase.netlify.app//"
               target="blank"
             >
