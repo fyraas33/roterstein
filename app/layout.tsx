@@ -2,8 +2,8 @@ import "./globals.css"
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { AuthProvider } from "./Providers";
-import { Suspense } from "react";
-import Loadingg from "../components/Loadingg"
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {

@@ -10,7 +10,7 @@ export default function Cookiesbn () {
 
   useEffect(() => {
     setShowConsent(cookies.localConsent);
-  }, []);
+  }, [cookies.localConsent]);
 
   const acceptCookie = () => {
     let date = new Date();
