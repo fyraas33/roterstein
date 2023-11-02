@@ -152,7 +152,7 @@ function Footer() {
           >
             2023 © Restaurant Roter Stein - Alle Rechte Vorbehalten - Designed By OAASE
           </a>
-   <div className="flex">
+   <div className="flex ftraa">
       
              <a href="impressum"   className="font-semibold text-white hover:text-red-600  ">
                Impressum 

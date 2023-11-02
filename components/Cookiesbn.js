@@ -1,44 +1,43 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
-import { hasCookie, setCookie } from 'cookies-next'
+import React, { useEffect, useState } from 'react';
+import { useCookies } from 'react-cookie';
 
-export default function Cookiesbn (){
+export default function Cookiesbn () {
 
-const [showConsent, setShowConsent] = useState(true);
-useEffect(() =>
-{
-    setShowConsent( hasCookie("localConsent"));
-},[]);
+  const [cookies, setCookie] = useCookies(['localConsent']);
+  const [showConsent, setShowConsent] = useState(true);
 
-const acceptCookie = () =>
-{
+  useEffect(() => {
+    setShowConsent(cookies.localConsent);
+  }, []);
+
+  const acceptCookie = () => {
+    let date = new Date();
+    date.setDate(date.getDate() + 14); 
+    setCookie('localConsent', "true", { expires: date }); 
     setShowConsent(true);
-    setCookie('localConsent', "true",  365 ) 
-}
-if(showConsent)
-{
+  }
+
+  if(showConsent) {
     return null;
-}
-return(
+  }
 
-
-
-<div id="cookie-bar">
-  <div id="contentcookie">
-    <p>
-      We use cookies to ensure you get the best experience on our website. By
-      using our site, you agree to our cookie policy.
-    </p>
-    <button  className="btn btn-secondary" onClick={()=> acceptCookie()} >
-        <span className="text text-1">Accept</span>
-        <span className="text text-2" aria-hidden="true">
-        Accept
-        </span>
-      </button>
-    <div className="clear" />
-  </div>
-</div>
-
-)
+  return(
+    <div id="cookie-bar">
+      <div id="contentcookie">
+        <p>
+          We use cookies to ensure you get the best experience on our website. By
+          using our site, you agree to our cookie policy.
+        </p>
+        <button  className="btn btn-secondary" onClick={acceptCookie} >
+          <span className="text text-1">Accept</span>
+          <span className="text text-2" aria-hidden="true">
+          Accept
+          </span>
+        </button>
+        <div className="clear" />
+      </div>
+    </div>
+  )
 }
