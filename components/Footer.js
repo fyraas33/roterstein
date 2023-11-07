@@ -1,12 +1,57 @@
 
+"use client"
 
+import Modal from "react-modal";
+
+
+import React, { useEffect, useState } from 'react';
 
 import gglog from "../assest/img/ggl.png";
 import logo from "../assest/img/logoblk.png";
 import Image from "next/image";
-import Link from "next/link";
+import Impressum from "./Impressum";
+import  Datenschutz from "./Datenschutz"
 
 function Footer() {
+
+ 
+  const [impressumOpen, setimpressumOpen] = useState(false);
+  const [ datenschutzOpen, setdatenschutzOpen] = useState(false);
+  const openImpressum = () => {
+    setimpressumOpen(true);
+  };
+
+  const closeImpressum = () => {
+    setimpressumOpen(false);
+  };
+  const openDatenschutz= () => {
+    setdatenschutzOpen(true);
+  };
+
+  const closeDatenschutz = () => {
+    setdatenschutzOpen(false);
+  };
+  const customStyles = {
+    content: {
+      width: "25%",
+      height: "50%",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "white",
+    },
+  };
+  const closeButtonStyles = {
+    backgroundColor: "transparent",
+    border: "none",
+    color: "red",
+    fontSize: "1.5rem",
+    cursor: "pointer",
+    position: "absolute",
+    top: "0px",
+    right: "10px",
+  };
+
   return (
     <div className="fotter">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -154,20 +199,62 @@ function Footer() {
           </a>
    <div className="flex ftraa">
       
-             <a href="impressum"   className="font-semibold text-white hover:text-red-600  ">
+             <div   className="font-semibold text-white hover:text-red-600 cursor-pointer " onClick={openImpressum} >
                Impressum 
-                  </a> 
-        
+                  </div> 
+                  <Modal
+                    appElement={
+                      typeof window !== "undefined"
+                        ? document.getElementById("root")
+                        : undefined
+                    }
+                    isOpen={impressumOpen}
+                    onRequestClose={closeImpressum}
+                    ariaHideApp={false}
+                    style={customStyles}
+                    contentLabel="Main Menu Modal"
+                  >
+               
+                  <Impressum/>
+                    <button
+                      onClick={closeImpressum}
+                      style={closeButtonStyles}
+                    >
+                      &#10060;
+                    </button>
+                  </Modal>
           
         
             <p className="font-semibold text-white mx-6">|</p>
-            <a
-              className="font-semibold text-white mr-8 hover:text-red-600"
+            <div
+              className="font-semibold text-white mr-8 hover:text-red-600 cursor-pointer"
               href="https://oaase.netlify.app//"
               target="blank"
-            >
+              onClick={openDatenschutz} 
+          >
              Datenschutz
-            </a>
+            </div>
+            <Modal
+                    appElement={
+                      typeof window !== "undefined"
+                        ? document.getElementById("root")
+                        : undefined
+                    }
+                    isOpen={datenschutzOpen}
+                    onRequestClose={closeDatenschutz}
+                    ariaHideApp={false}
+                    style={customStyles}
+                    contentLabel="Main Menu Modal"
+                  >
+               
+                  < Datenschutz/>
+                    <button
+                      onClick={closeDatenschutz}
+                      style={closeButtonStyles}
+                    >
+                      &#10060;
+                    </button>
+                  </Modal>
    </div>
          
         </div>
